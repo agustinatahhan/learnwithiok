@@ -13,7 +13,7 @@ const inter = localFont({
     { path: "/fonts/Inter_24pt-Light.ttf", weight: "300", style: "normal" },
 
     { path: "/fonts/Inter_24pt-Regular.ttf", weight: "400", style: "normal" },
-    { path: "/fonts/Inter_24pt-Italic.ttf", weight: "400", style: "normal" },
+    { path: "/fonts/Inter_24pt-Italic.ttf", weight: "400", style: "italic" },
 
     { path: "/fonts/Inter_24pt-Medium.ttf", weight: "500", style: "normal" },
     {

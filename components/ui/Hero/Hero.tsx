@@ -20,11 +20,11 @@ export default function Hero() {
       <div className="relative z-10 h-full flex items-center">
         <div className="ctn">
           <div className="w-full lg:max-w-2xl flex flex-col items-center justify-center lg:items-start lg:justify-start space-y-8 lg:space-y-12">
-            <div className="space-y-3">
-              <h1 className="text-white">Transformá tu futuro con inglés</h1>
+            <div className="space-y-4">
+              <h1 className="text-white">Tu espacio seguro para aprender inglés</h1>
 
-              <p className="text-white/90 icursive">
-                Clases dinámicas y personalizadas
+              <p className="text-white/90 text-lg italic">
+                Conéctate, practica y mejora tu inglés en un entorno seguro y amigable.
               </p>
             </div>
 

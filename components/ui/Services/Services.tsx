@@ -2,22 +2,58 @@ import Image from "next/image";
 
 const items = [
   {
-    img: "/images/group.png",
-    title: "Clases Grupales",
-    description:
-      "Aprendé en comunidad con dinámicas colaborativas. Un espacio ideal para practicar conversación real, perder el miedo y enriquecer tu vocabulario con los aportes de otros.",
-  },
-  {
     img: "/images/individual.jpg",
     title: "Clases Individuales",
-    description:
-      "Atención exclusiva y personalizada al 100%. Avanzá a tu propio ritmo con un plan diseñado específicamente para tus desafíos, intereses y tiempos particulares.",
+    badge: "1:1",
+    description: "Sesiones totalmente adaptadas a tu nivel, ritmo y objetivos.",
+    label: "Ideales si:",
+    bullets: [
+      "Querés avanzar más rápido",
+      "Necesitás preparación específica",
+      "Buscás acompañamiento personalizado",
+      "Querés trabajar bloqueos al hablar",
+    ],
+  },
+  {
+    img: "/images/group.png",
+    title: "Clases en Grupos Reducidos",
+    badge: "Grupos",
+    description: "Grupos pequeños, ambiente cálido y participativo.",
+    label: "Ideales si:",
+    bullets: [
+      "Te motiva aprender con otros",
+      "Querés practicar conversación real",
+      "Buscás una opción más accesible",
+      "Querés sentir comunidad mientras aprendés",
+    ],
   },
   {
     img: "/images/interview.jpg",
-    title: "Preparación de Entrevistas",
+    title: "Inglés para Profesionales",
+    badge: "Profesional",
     description:
-      "Ganá la confianza necesaria para dar el próximo paso en tu carrera. Simulacros reales, corrección de CV y herramientas clave para destacar tu perfil profesional en inglés.",
+      "Perfecto si querés crecer profesionalmente o trabajar en el exterior.",
+    label: "Clases enfocadas en:",
+    bullets: [
+      "Reuniones laborales",
+      "Presentaciones",
+      "Entrevistas de trabajo",
+      "Comunicación empresarial",
+      "Fluidez en entornos internacionales",
+    ],
+  },
+  {
+    img: "/images/exam.jpg",
+    title: "Preparación para Exámenes",
+    badge: "Exámenes",
+    description: "Preparación personalizada para distintos niveles.",
+    label: "Trabajo con:",
+    bullets: [
+      "Estrategias específicas",
+      "Práctica cronometrada",
+      "Simulaciones reales",
+      "Correcciones detalladas",
+    ],
   },
 ];
 
@@ -29,26 +65,46 @@ export default function Services() {
           <h2>Nuestros Servicios</h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {items.map(({ img, title, description }) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+          {items.map(({ img, title, badge, description, label, bullets }) => (
             <div
               key={title}
               className="bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow flex flex-col overflow-hidden"
             >
-              {/* IMAGE — mitad superior */}
-              <div className="relative w-full h-56">
-                <Image
-                  src={img}
-                  alt={title}
-                  fill
-                  className="object-cover"
-                />
+              {/* IMAGE */}
+              <div className="relative w-full h-60">
+                <Image src={img} alt={title} fill className="object-cover" />
+                {/* Badge sobre la imagen */}
+                <span className="absolute top-3 left-3 bg-linear-to-r from-pink to-violet text-white text-xs font-semibold px-3 py-1 rounded-full shadow-sm">
+                  {badge}
+                </span>
               </div>
 
-              {/* TEXT — mitad inferior */}
-              <div className="flex flex-col gap-3 p-6">
-                <h3 className="text-text font-bold text-lg">{title}</h3>
-                <p className="text-text/60 text-sm leading-relaxed">{description}</p>
+              {/* TEXT */}
+              <div className="flex flex-col gap-3 p-5 flex-1">
+                <div>
+                  <h3 className="font-bold text-base leading-snug">{title}</h3>
+                </div>
+                <div>
+                  <p className="font-normal">{description}</p>
+                </div>
+
+                <div className="pt-3 border-t border-pink/20">
+                  <p className="text-violet text-xs font-semibold uppercase tracking-wide mb-2">
+                    {label}
+                  </p>
+                  <ul className="flex flex-col gap-1.5">
+                    {bullets.map((b) => (
+                      <li
+                        key={b}
+                        className="flex items-start gap-2 text-sm"
+                      >
+                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-violet/40 flex-shrink-0 " />
+                        {b}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
           ))}

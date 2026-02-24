@@ -25,7 +25,7 @@ const items = [
 
 export default function Metodology() {
   return (
-    <section className="bg-linear-to-r from-pink/30 to-violet/30 padding">
+    <section className="bg-linear-to-r from-blue/30 via-pink/30 to-violet/30 padding">
       <div className="ctn ctn-margin">
         <div className="mb-16">
           <p className="text-violet text-sm font-semibold uppercase tracking-widest mb-3">
