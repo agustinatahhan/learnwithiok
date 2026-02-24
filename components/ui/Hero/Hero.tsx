@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { IoCalendarNumberOutline } from "react-icons/io5";
 
 export default function Hero() {
@@ -22,16 +23,18 @@ export default function Hero() {
             <div className="space-y-3">
               <h1 className="text-white">Transformá tu futuro con inglés</h1>
 
-              <p className="text-white/90 italic">
+              <p className="text-white/90 icursive">
                 Clases dinámicas y personalizadas
               </p>
             </div>
 
-            <button className="btn btn-violet flex flex-row items-center justify-center gap-2">
+            <Link
+              href="/agenda"
+              className="btn btn-colors flex flex-row items-center justify-center gap-2"
+            >
               <IoCalendarNumberOutline size={20} />
-
-              <>Agendá tu clase</>
-            </button>
+              <>Agendá tu Clase</>
+            </Link>
           </div>
         </div>
       </div>
