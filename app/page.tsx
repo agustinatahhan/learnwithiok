@@ -1,4 +1,6 @@
+import Audience from "@/components/ui/Audience/Audience";
 import Class from "@/components/ui/Class/Class";
+import Contact from "@/components/ui/Contact/Contact";
 import Divider from "@/components/ui/Divider/Divider";
 import Hero from "@/components/ui/Hero/Hero";
 import Metodology from "@/components/ui/Metodology/Metodology";
@@ -12,6 +14,8 @@ export default function Home() {
       <Metodology />
       <Class />
       <Services />
+      <Audience />
+      <Contact />
     </>
   );
 }

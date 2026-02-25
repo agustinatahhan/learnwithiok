@@ -46,13 +46,13 @@ body {
   }
 
   p {
-    @apply text-base md:text-[16px] font-normal leading-relaxed text-start;
+    @apply text-base md:text-[20px] font-normal leading-relaxed text-start;
   }
 }
 
 @layer components {
   .ctn {
-    @apply w-full max-w-6xl mx-auto px-6 lg:px-8;
+    @apply w-full lg:max-w-7xl mx-auto px-6 lg:px-8;
   }
 
   .ctn-margin {

@@ -50,7 +50,7 @@ export default function Metodology() {
           <h2 className="mb-6">
             ¿Qué me diferencia?
           </h2>
-          <p className="text-lg text-text/80 leading-relaxed">
+          <p className="text-text/80 leading-relaxed">
             Un enfoque <strong>moderno, dinámico y centrado en vos</strong>. <br></br>
             Mis clases combinan comunicación real con una metodología basada en la investigación sobre la adquisición de segundas lenguas.
           </p>
@@ -67,7 +67,7 @@ export default function Metodology() {
                 <Icon size={28} className="text-violet" />
               </div>
               <div>
-                <h4 className=" mb-3">{title}</h4>
+                <h4 className="mb-3">{title}</h4>
                 <p className="text-text/80 leading-snug">
                   {description}
                 </p>

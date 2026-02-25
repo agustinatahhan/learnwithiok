@@ -23,7 +23,7 @@ export default function Hero() {
             <div className="space-y-4">
               <h1 className="text-white">Tu espacio seguro para aprender inglés</h1>
 
-              <p className="text-white/90 italic text-center">
+              <p className="text-white/90 italic ">
                 Conéctate, practica y mejora tu inglés en un entorno seguro y amigable.
               </p>
             </div>

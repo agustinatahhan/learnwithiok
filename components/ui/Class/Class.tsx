@@ -31,7 +31,7 @@ export default function FlippedClassroom() {
             </p>
           </div>
           <h2 className="mb-6">¿Qué es la Clase Invertida?</h2>
-          <p className="text-lg text-text/80 leading-relaxed">
+          <p className="text-text/80 leading-relaxed">
             Trabajo con el modelo de <strong>Flipped Classroom</strong>. Esto
             significa que el contenido teórico (videos breves, lecturas o
             actividades) se revisa antes de la clase para que, al encontrarnos,
@@ -43,7 +43,7 @@ export default function FlippedClassroom() {
           {/* Card 1: Durante la sesión */}
           <div className="flex flex-col gap-6 border border-text/10 rounded-2xl p-8">
             <div className="flex items-center gap-3">
-              <span className="text-xs font-bold text-pink uppercase tracking-widest">
+              <span className="text-sm font-bold text-pink uppercase tracking-widest">
                 01
               </span>
               <h4>Durante la sesión</h4>
@@ -56,7 +56,7 @@ export default function FlippedClassroom() {
                 <li key={index} className="flex items-start gap-3">
                   <HiOutlineCheckCircle
                     className="text-pink shrink-0 mt-0.5"
-                    size={16}
+                    size={20}
                   />
                   <p className=" leading-snug">{item}</p>
                 </li>
@@ -75,7 +75,7 @@ export default function FlippedClassroom() {
           {/* Card 2: Por qué funciona */}
           <div className="flex flex-col gap-6 border border-text/10 rounded-2xl p-8">
             <div className="flex items-center gap-3">
-              <span className="text-xs font-bold text-pink uppercase tracking-widest">
+              <span className="text-sm font-bold text-pink uppercase tracking-widest">
                 02
               </span>
               <h4>¿Por qué funciona?</h4>
