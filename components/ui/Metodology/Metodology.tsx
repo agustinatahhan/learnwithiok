@@ -1,25 +1,41 @@
-import { HiOutlineUserGroup } from "react-icons/hi";
-import { HiOutlineBookOpen } from "react-icons/hi2";
-import { TbTrendingUp } from "react-icons/tb";
+import { 
+  HiOutlineComputerDesktop, 
+  HiOutlineChatBubbleLeftRight, 
+  HiOutlineDocumentCheck, 
+  HiOutlineAcademicCap,
+  HiOutlinePresentationChartLine 
+} from "react-icons/hi2";
 
 const items = [
   {
-    icon: HiOutlineUserGroup,
-    title: "Interactiva",
+    icon: HiOutlineComputerDesktop,
+    title: "100% Online y Personalizado",
     description:
-      "Aprendizaje dinámico y práctico. Priorizamos la conversación espontánea para que ganes fluidez y confianza desde el primer día.",
+      "Clases diseñadas exclusivamente para vos, sin traslados y aprovechando al máximo las herramientas digitales.",
   },
   {
-    icon: HiOutlineBookOpen,
-    title: "Personalizada",
+    icon: HiOutlineChatBubbleLeftRight,
+    title: "Enfoque en Fluidez",
     description:
-      "Contenido adaptado a tus metas profesionales y ritmo personal. Diseñamos un plan de estudio que se ajusta a lo que vos necesitás.",
+      "Basado en el método comunicativo: el objetivo es que hables y te expreses con confianza en situaciones reales.",
   },
   {
-    icon: TbTrendingUp,
-    title: "Evolución Constante",
+    icon: HiOutlineDocumentCheck,
+    title: "Material Adaptado",
     description:
-      "Resultados tangibles. Notarás tu avance sesión tras sesión con un seguimiento cercano que garantiza alcanzar tus objetivos.",
+      "Contenido actualizado y relevante según tus objetivos específicos, ya sean profesionales o personales.",
+  },
+  {
+    icon: HiOutlinePresentationChartLine,
+    title: "Feedback y Seguimiento",
+    description:
+      "Monitoreo constante de tu progreso con devoluciones constructivas para que veas tu evolución real paso a paso.",
+  },
+  {
+    icon: HiOutlineAcademicCap,
+    title: "Flipped Classroom",
+    description:
+      "Metodología de 'clase invertida' para optimizar el tiempo de encuentro y potenciar tu aprendizaje autónomo.",
   },
 ];
 
@@ -29,25 +45,30 @@ export default function Metodology() {
       <div className="ctn ctn-margin">
         <div className="mb-16">
           <p className="text-violet text-sm font-semibold uppercase tracking-widest mb-3">
-            Enfoque Pedagógico
+            Metodología
           </p>
-          <h2>
-            Nuestra Metodología
+          <h2 className="mb-6">
+            ¿Qué me diferencia?
           </h2>
+          <p className="text-lg text-text/80 leading-relaxed">
+            Un enfoque <strong>moderno, dinámico y centrado en vos</strong>. <br></br>
+            Mis clases combinan comunicación real con una metodología basada en la investigación sobre la adquisición de segundas lenguas.
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {/* Grid ajustado para 5 elementos */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {items.map(({ icon: Icon, title, description }) => (
             <div
               key={title}
-              className="bg-white rounded-2xl p-8 shadow-sm flex flex-col gap-5 hover:shadow-md transition-shadow items-center lg:items-start"
+              className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-sm flex flex-col gap-5 hover:shadow-md transition-all hover:-translate-y-1"
             >
-              <div className="w-11 h-11 rounded-xl bg-violet/10 flex items-center justify-center">
-                <Icon size={25} className="text-violet" />
+              <div className="w-12 h-12 rounded-xl bg-violet/10 flex items-center justify-center">
+                <Icon size={28} className="text-violet" />
               </div>
               <div>
-                <h3 className="text-text font-bold text-lg mb-2">{title}</h3>
-                <p>
+                <h4 className=" mb-3">{title}</h4>
+                <p className="text-text/80 leading-snug">
                   {description}
                 </p>
               </div>

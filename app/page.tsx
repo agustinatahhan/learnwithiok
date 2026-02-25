@@ -1,3 +1,4 @@
+import Class from "@/components/ui/Class/Class";
 import Divider from "@/components/ui/Divider/Divider";
 import Hero from "@/components/ui/Hero/Hero";
 import Metodology from "@/components/ui/Metodology/Metodology";
@@ -9,6 +10,7 @@ export default function Home() {
       <Hero />
       <Divider />
       <Metodology />
+      <Class />
       <Services />
     </>
   );

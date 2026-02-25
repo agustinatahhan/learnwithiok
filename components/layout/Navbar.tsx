@@ -24,7 +24,7 @@ export function Navbar() {
           <Link href="/">
             <div className="relative w-28 h-12">
               <Image
-                src="/images/logo.png"
+                src="/images/logo/logo.png"
                 alt="Logo learnwithiok"
                 fill
                 className="object-contain"
