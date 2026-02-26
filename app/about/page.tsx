@@ -22,8 +22,6 @@ export default function AboutSection() {
             viewport={{ once: true }}
           >
             <div className="relative w-55 sm:w-62.5 lg:w-70">
-            
-
               <div className="relative h-70 sm:h-77.5 lg:h-85 rounded-[28px] overflow-hidden shadow-xl border border-black/10">
                 <Image
                   src="/images/her/karen.jpeg"
@@ -35,14 +33,12 @@ export default function AboutSection() {
                 <div className="absolute inset-0 bg-linear-to-t from-black/20 to-transparent" />
               </div>
 
-             
               <div className="absolute -bottom-4 -left-4 bg-bg shadow-md border border-black/10 rounded-2xl px-4 py-2 text-sm font-semibold text-text whitespace-nowrap">
                 +5 años enseñando 🎓
               </div>
             </div>
           </motion.div>
 
-       
           <motion.div
             className="lg:col-span-7 lg:order-1"
             initial={{ opacity: 0, y: 20 }}
@@ -105,7 +101,7 @@ export default function AboutSection() {
             </p>
           </div>
 
-          <Link href="/agenda" className="btn btn-colors mt-12">
+          <Link href="/agenda" className="btn btn-colors mt-12 w-auto self-center lg:self-start">
             Quiero empezar
           </Link>
         </motion.div>

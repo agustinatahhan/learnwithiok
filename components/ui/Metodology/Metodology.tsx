@@ -69,10 +69,10 @@ export default function Metodology() {
             <motion.div
               key={title}
               className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-sm flex flex-col gap-5 hover:shadow-md transition-all hover:-translate-y-1"
-              initial={{ opacity: 0, y: 24 }}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1, ease: "easeOut" }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.07, ease: "easeOut" }}
+              viewport={{ once: true, margin: "-80px" }}
             >
               <div className="w-12 h-12 rounded-xl bg-violet/10 flex items-center justify-center">
                 <Icon size={28} className="text-violet" />
