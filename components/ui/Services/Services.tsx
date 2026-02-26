@@ -100,12 +100,12 @@ export default function Services() {
                 </div>
 
                 <div className="pt-3 border-t border-violet/20">
-                  <p className="text-violet text-[20px] font-bold mb-3">
+                  <p className="text-violet lg:text-[20px] font-bold mb-3">
                     {label}
                   </p>
                   <ul className="flex flex-col gap-1.5">
                     {bullets.map((b) => (
-                      <li key={b} className="flex items-start gap-2 text-[20px]">
+                      <li key={b} className="flex items-start gap-2 lg:text-[20px]">
                         <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-violet/40 flex-shrink-0" />
                         {b}
                       </li>
