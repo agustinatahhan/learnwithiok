@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const items = [
   {
@@ -59,28 +62,35 @@ const items = [
 
 export default function Services() {
   return (
-    <section className="bg-bg padding">
+    <section className="bg-linear-to-b from-violet/10 to-white padding">
       <div className="ctn ctn-margin">
-        <div className="mb-16">
+        <motion.div
+          className="mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+        >
           <h2>Nuestros Servicios</h2>
-        </div>
+        </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-          {items.map(({ img, title, badge, description, label, bullets }) => (
-            <div
+          {items.map(({ img, title, badge, description, label, bullets }, index) => (
+            <motion.div
               key={title}
               className="bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow flex flex-col overflow-hidden"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.12, ease: "easeOut" }}
+              viewport={{ once: true }}
             >
-              {/* IMAGE */}
               <div className="relative w-full h-60">
                 <Image src={img} alt={title} fill className="object-cover" />
-                {/* Badge sobre la imagen */}
                 <span className="absolute top-3 left-3 bg-linear-to-r from-pink to-violet text-white text-xs font-semibold px-3 py-1 rounded-full shadow-sm">
                   {badge}
                 </span>
               </div>
 
-              {/* TEXT */}
               <div className="flex flex-col gap-6 p-5 flex-1">
                 <div>
                   <h4>{title}</h4>
@@ -95,18 +105,15 @@ export default function Services() {
                   </p>
                   <ul className="flex flex-col gap-1.5">
                     {bullets.map((b) => (
-                      <li
-                        key={b}
-                        className="flex items-start gap-2 text-[20px]"
-                      >
-                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-violet/40 flex-shrink-0 " />
+                      <li key={b} className="flex items-start gap-2 text-[20px]">
+                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-violet/40 flex-shrink-0" />
                         {b}
                       </li>
                     ))}
                   </ul>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
