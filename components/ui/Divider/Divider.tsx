@@ -37,8 +37,8 @@ export default function Divider() {
                 className={`
                   ${
                     isLast
-                      ? "text-xl lg:text-xl font-semibold text-transparent bg-clip-text bg-linear-to-r from-blue via-pink to-violet text-center "
-                      : "text-lg lg:text-xl font-medium text-center "
+                      ? "text-xl lg:text-2xl font-semibold text-transparent bg-clip-text bg-linear-to-r from-blue via-pink to-violet text-center "
+                      : "text-xl lg:text-2xl font-medium text-center "
                   }
                 `}
               >

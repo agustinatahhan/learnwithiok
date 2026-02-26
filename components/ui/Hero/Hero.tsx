@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <section className="relative w-full h-screen">
       <Image
-        src="/images/hero2.png"
+        src="/images/hero/hero2.png"
         alt="Imagen de estudiantes"
         fill
         priority
@@ -17,13 +17,13 @@ export default function Hero() {
       <div className="absolute inset-0 bg-black/40" />
 
       {/* Content */}
-      <div className="relative z-10 h-full flex items-center">
+      <div className="relative z-10 h-full flex items-center ">
         <div className="ctn">
-          <div className="w-full lg:max-w-2xl flex flex-col items-center justify-center lg:items-start lg:justify-start space-y-8">
+          <div className="w-full flex flex-col items-center justify-center lg:items-center lg:justify-center space-y-8 lg:space-y-16 ">
             <div className="space-y-4">
-              <h1 className="text-white">Tu espacio seguro para aprender inglés</h1>
+              <h1 className="text-white text-center text-shadow-sm">Tu espacio seguro para aprender inglés</h1>
 
-              <p className="text-white/90 italic ">
+              <p className="text-white/90 italic text-center text-shadow-sm">
                 Conéctate, practica y mejora tu inglés en un entorno seguro y amigable.
               </p>
             </div>
