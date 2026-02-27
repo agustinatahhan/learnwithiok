@@ -30,17 +30,19 @@ export default function Hero() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
               >
-                Tu espacio seguro para aprender inglés
+                Tu espacio seguro para practicar inglés
               </motion.h1>
 
               <motion.p
-                className="text-white/90 italic text-center text-shadow-sm"
+                className="text-white/90 text-center text-shadow-sm"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
               >
-                Conéctate, practica y mejora tu inglés en un entorno seguro y amigable.
+                Hablá, equivocate y mejorá con acompañamiento real.
               </motion.p>
+
+              
             </div>
 
             <motion.div
@@ -56,6 +58,16 @@ export default function Hero() {
                 <>Agendá tu Clase</>
               </Link>
             </motion.div>
+
+            <motion.p
+                className="text-white/90 text-center text-shadow-sm"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+              >
+                Clases 100% online para adultos · Flexibles y
+                personalizadas
+              </motion.p>
           </div>
         </div>
       </div>

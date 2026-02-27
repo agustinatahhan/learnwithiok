@@ -4,10 +4,10 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 
 const phrases = [
-  "No solo aprendés gramática.",
-  "Aprendés a usar el idioma con confianza, claridad y propósito.",
-  "Si vivís en el extranjero, trabajás en entornos internacionales o querés expandir tus oportunidades…",
-  "Estás en el lugar correcto.",
+  "Aquí se aprende inglés hablando.",
+  "Se practica, se usa y se integra en conversaciones reales.",
+  "Cada clase está diseñada para que hables, ganes fluidez y desarrolles confianza desde el primer día.",
+  "Si quieres comunicarte con seguridad y abrirte a nuevas oportunidades, estás en el lugar correcto.",
 ];
 
 export default function Divider() {

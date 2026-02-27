@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const items = [
   {
     img: "/images/services/individual.jpg",
-    title: "Clases Individuales",
+    title: "Clases Individuales de inglés general",
     badge: "1:1",
     description: "Sesiones totalmente adaptadas a tu nivel, ritmo y objetivos.",
     label: "Ideales si:",
@@ -19,7 +19,7 @@ const items = [
   },
   {
     img: "/images/services/group.png",
-    title: "Clases en Grupos Reducidos",
+    title: "Clases en Grupos Reducidos de inglés general",
     badge: "Grupos",
     description: "Grupos pequeños, ambiente cálido y participativo.",
     label: "Ideales si:",
@@ -47,7 +47,7 @@ const items = [
   },
   {
     img: "/images/services/exam.jpg",
-    title: "Preparación para Exámenes",
+    title: "Preparación para Exámenes - IELTS y Cambridge",
     badge: "Exámenes",
     description: "Preparación personalizada para distintos niveles.",
     label: "Trabajo con:",

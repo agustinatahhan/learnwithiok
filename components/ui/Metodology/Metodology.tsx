@@ -6,39 +6,47 @@ import {
   HiOutlineDocumentCheck,
   HiOutlineAcademicCap,
   HiOutlinePresentationChartLine,
+  HiOutlineUsers,
 } from "react-icons/hi2";
 import { motion } from "framer-motion";
 
 const items = [
   {
     icon: HiOutlineComputerDesktop,
-    title: "100% Online y Personalizado",
+    title: "100% Online en vivo",
     description:
       "Clases diseñadas exclusivamente para vos, sin traslados y aprovechando al máximo las herramientas digitales.",
   },
+
   {
-    icon: HiOutlineChatBubbleLeftRight,
-    title: "Enfoque en Fluidez",
+    icon: HiOutlineAcademicCap,
+    title: "Flipped Classroom",
     description:
-      "Basado en el método comunicativo: el objetivo es que hables y te expreses con confianza en situaciones reales.",
+      "(Aula Invertida) Optimiza tu tiempo: prepara los temas con contenido previo para que el encuentro en vivo sea 100% práctico y participativo.",
   },
   {
     icon: HiOutlineDocumentCheck,
-    title: "Material Adaptado",
+    title: "Material",
     description:
-      "Contenido actualizado y relevante según tus objetivos específicos, ya sean profesionales o personales.",
+      "Contenido actualizado y relevante según tus objetivos (profesionales o personales) y adaptado exactamente a tu nivel actual.",
   },
   {
     icon: HiOutlinePresentationChartLine,
     title: "Feedback y Seguimiento",
     description:
-      "Monitoreo constante de tu progreso con devoluciones constructivas para que veas tu evolución real paso a paso.",
+      "Monitoreo constante y personalizado de tu evolución . A través de mini-tests estratégicos, mediremos tu progreso real en cada etapa, asegurando que cada paso que das sea firme y hacia tu objetivo.",
   },
   {
-    icon: HiOutlineAcademicCap,
-    title: "Flipped Classroom",
+    icon: HiOutlineChatBubbleLeftRight,
+    title: "Método Comunicativo",
     description:
-      "Metodología de 'clase invertida' para optimizar el tiempo de encuentro y potenciar tu aprendizaje autónomo.",
+      "Basado en el aprendizaje cooperativo y colaborativo. El foco está en que hables y te expreses con confianza desde el primer día.",
+  },
+  {
+    icon: HiOutlineUsers,
+    title: "Comunidad Exclusiva",
+    description:
+      "Acceso a un grupo de WhatsApp o plataforma donde puedes practicar con otros alumnos y resolver dudas fuera de horario",
   },
 ];
 
@@ -53,14 +61,16 @@ export default function Metodology() {
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
         >
-          <p className="text-violet text-sm font-semibold uppercase tracking-widest mb-3">
+          {/* <p className="text-violet text-sm font-semibold uppercase tracking-widest mb-3">
             Metodología
-          </p>
-          <h2 className="mb-6">¿Qué me diferencia?</h2>
+          </p> */}
+          <h2 className="mb-6">Metodología</h2>
           <p className="text-text/80 leading-relaxed">
-            Un enfoque <strong>moderno, dinámico y centrado en vos</strong>. <br />
-            Mis clases combinan comunicación real con una metodología basada en
-            la investigación sobre la adquisición de segundas lenguas.
+            <strong> Aprende a tu ritmo, habla con confianza.</strong> <br />
+            Nuestras clases están diseñadas para que desarrolles fluidez y
+            pensamiento crítico en inglés. Combinamos sesiones sincrónicas y
+            asincrónicas con un objetivo claro: que logres comunicarte con
+            seguridad en situaciones reales.
           </p>
         </motion.div>
 
@@ -71,7 +81,11 @@ export default function Metodology() {
               className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-sm flex flex-col gap-5"
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.07, ease: "easeOut" }}
+              transition={{
+                duration: 0.5,
+                delay: index * 0.07,
+                ease: "easeOut",
+              }}
               viewport={{ once: true, margin: "-80px" }}
             >
               <div className="w-12 h-12 rounded-xl bg-violet/10 flex items-center justify-center">
