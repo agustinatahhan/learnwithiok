@@ -29,16 +29,21 @@ const inter = localFont({
   display: "swap",
 });
 
-const outfit = localFont({
+const signika = localFont({
   src: [
+    { path: "/fonts/Signika-Light.ttf", weight: "300", style: "normal" },
+
+    { path: "/fonts/Signika-Regular.ttf", weight: "400", style: "normal" },
+
+    { path: "/fonts/Signika-Medium.ttf", weight: "500", style: "normal" },
     {
-      path: "/fonts/Outfit-SemiBold.otf",
+      path: "/fonts/Signika-SemiBold.ttf",
       weight: "600",
       style: "normal",
     },
-    { path: "/fonts/Outfit-Bold.otf", weight: "700", style: "normal" },
+    { path: "/fonts/Signika-Bold.ttf", weight: "700", style: "normal" },
   ],
-  variable: "--font-outfit",
+  variable: "--font-signika",
   display: "swap",
 });
 
@@ -48,7 +53,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${outfit.variable} `}>
+    <html lang="en" className={`${inter.variable} ${signika.variable} `}>
       <body className="font-sans font-normal">
         <Navbar />
         {children}
