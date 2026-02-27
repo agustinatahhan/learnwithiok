@@ -28,7 +28,7 @@ const plans = [
   },
 ];
 
-const CALENDLY_URL = "https://calendly.com/agustinatahhan";
+const CALENDLY_URL = "https://calendly.com/learnwithiok";
 
 export default function Agenda() {
   return (
@@ -151,7 +151,11 @@ export default function Agenda() {
             >
               <InlineWidget
                 url={CALENDLY_URL}
-                styles={{ height: "650px", minWidth: "320px" }}
+                styles={{
+                  height: "700px",
+                  minWidth: "100%",
+                  width: "100%",
+                }}
               />
             </motion.div>
 
@@ -220,7 +224,9 @@ export default function Agenda() {
         viewport={{ once: true }}
       >
         <div className="ctn ctn-margin">
-          <h3 className=" text-center">¡Y ahora sí, empezá tu camino hacia el aprendizaje! 🚀</h3>
+          <h3 className=" text-center">
+            ¡Y ahora sí, empezá tu camino hacia el aprendizaje! 🚀
+          </h3>
           <p className="text-text/80 text-center mt-2">
             ¿Tenés dudas? Escribinos y con gusto te ayudamos.
           </p>
