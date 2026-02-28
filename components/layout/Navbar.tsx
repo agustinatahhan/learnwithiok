@@ -22,7 +22,7 @@ export function Navbar() {
         <div className="flex w-full items-center justify-between">
           {/* LOGO */}
           <Link href="/">
-            <div className="relative w-28 h-12">
+            <div className="relative w-30 h-14">
               <Image
                 src="/images/logo/logo.png"
                 alt="Logo learnwithiok"
@@ -44,8 +44,8 @@ export function Navbar() {
                   href={item.href}
                   className={`text-sm transition-all px-4 py-1.5 rounded-4xl ${
                     isActive
-                      ? "bg-linear-to-r from-pink to-violet text-white font-semibold shadow-sm"
-                      : "text-text/70 hover:text-violet font-medium"
+                      ? "bg-linear-to-r from-pink to-violet text-white font-semibold shadow-sm lg:text-[16px]"
+                      : "text-text/70 hover:text-violet font-medium lg:text-[16px]"
                   }`}
                 >
                   {item.label}

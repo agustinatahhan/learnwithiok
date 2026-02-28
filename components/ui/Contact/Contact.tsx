@@ -16,7 +16,7 @@ export default function Contact() {
           viewport={{ once: true }}
         >
           <h2 className="mb-6 text-center">¿Listo para empezar?</h2>
-          <p className="text-text/80 leading-relaxed text-center">
+          <p className="text-text/80 text-center">
             Reservá tu primera clase y empezá a hablar inglés con confianza.
           </p>
         </motion.div>

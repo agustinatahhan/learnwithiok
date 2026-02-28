@@ -30,6 +30,20 @@ const items = [
       "Querés sentir comunidad mientras aprendés",
     ],
   },
+   {
+    img: "/images/services/conv.jpg",
+    title: "Club de Conversación",
+    badge: "Coversación",
+    description: " Clases 100 % habladas, dinámicas y divertidas para mejorar tu inglés desde el primer minuto.",
+    label: "Lo que vas a conseguir:",
+    bullets: [
+      "Habla real: Conversaciones auténticas como en la vida diaria o el trabajo.",
+      "Confianza total: Expresarte sin miedo y con seguridad.",
+      "Fluidez rápida: Practica hablar sin pausas ni bloqueos.",
+      "Temas actuales: Noticias, cultura, tendencias",
+      "Corrección útil: Feedback inmediato y personalizado para mejorar cada día.",
+    ],
+  },
   {
     img: "/images/services/interview.jpg",
     title: "Inglés para Profesionales",
@@ -62,7 +76,7 @@ const items = [
 
 export default function Services() {
   return (
-    <section className="bg-linear-to-b from-violet/10 to-white padding">
+    <section className="bg-linear-to-b from-violet/15 to-bg padding">
       <div className="ctn ctn-margin">
         <motion.div
           className="mb-16"
