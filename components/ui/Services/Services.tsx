@@ -85,7 +85,7 @@ export default function Services() {
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
         >
-          <h2>Nuestros Servicios</h2>
+          <h2>Elegí tu experiencia de aprendizaje</h2>
         </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
@@ -100,7 +100,7 @@ export default function Services() {
             >
               <div className="relative w-full h-60">
                 <Image src={img} alt={title} fill className="object-cover" />
-                <span className="absolute top-3 left-3 bg-linear-to-r from-pink to-violet text-white text-xs font-semibold px-3 py-1 rounded-full shadow-sm">
+                <span className="absolute top-3 left-3 bg-linear-to-r from-blue to-violet text-white text-xs font-semibold px-3 py-1 rounded-full shadow-sm">
                   {badge}
                 </span>
               </div>
@@ -113,14 +113,14 @@ export default function Services() {
                   <p className="font-normal">{description}</p>
                 </div>
 
-                <div className="pt-3 border-t border-violet/20">
-                  <p className="text-violet lg:text-[20px] font-bold mb-3">
+                <div className="pt-3 border-t border-blue/20">
+                  <p className="text-blue lg:text-[20px] font-bold mb-3">
                     {label}
                   </p>
                   <ul className="flex flex-col gap-1.5">
                     {bullets.map((b) => (
                       <li key={b} className="flex items-start gap-2 lg:text-[20px]">
-                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-violet/40 flex-shrink-0" />
+                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue/40 flex-shrink-0" />
                         {b}
                       </li>
                     ))}

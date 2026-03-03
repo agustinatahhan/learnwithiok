@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 export default function Contact() {
   return (
     <section className="bg-bg padding">
-      <div className="ctn-margin px-6 lg:px-8 w-full justify-center items-center">
+      <div className="ctn-margin px-6 lg:px-8 w-full justify-center items-center pt-10">
         <motion.div
           className="mb-12"
           initial={{ opacity: 0, y: 20 }}

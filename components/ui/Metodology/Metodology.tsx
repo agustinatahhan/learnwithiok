@@ -34,7 +34,7 @@ const items = [
     icon: HiOutlinePresentationChartLine,
     title: "Feedback y Seguimiento",
     description:
-      "Monitoreo constante y personalizado de tu evolución . A través de mini-tests estratégicos, mediremos tu progreso real en cada etapa, asegurando que cada paso que das sea firme y hacia tu objetivo.",
+      "Monitoreo constante y personalizado de tu evolución . A través de mini-tests estratégicos, mediremos tu progreso real en cada etapa.",
   },
   {
     icon: HiOutlineChatBubbleLeftRight,
@@ -52,7 +52,7 @@ const items = [
 
 export default function Metodology() {
   return (
-    <section className="bg-linear-to-r from-blue/30 via-pink/30 to-violet/30 padding">
+    <section className="bg-linear-to-r from-violet/30 to-blue/30 padding">
       <div className="ctn ctn-margin">
         <motion.div
           className="mb-16"
@@ -61,24 +61,26 @@ export default function Metodology() {
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
         >
-          {/* <p className="text-violet text-sm font-semibold uppercase tracking-widest mb-3">
+          {/* <p className="text-blue text-sm font-semibold uppercase tracking-widest mb-3">
             Metodología
           </p> */}
-          <h2 className="mb-6">Metodología</h2>
+          <h2 className="mb-6">Tu ritmo, tus reglas</h2>
           <p className="text-text/80 leading-relaxed">
-            <strong> Aprende a tu ritmo, habla con confianza.</strong> <br />
-            Nuestras clases están diseñadas para que desarrolles fluidez y
-            pensamiento crítico en inglés. Combinamos sesiones sincrónicas y
-            asincrónicas con un objetivo claro: que logres comunicarte con
-            seguridad en situaciones reales.
+            ¿Cansado de los métodos rígidos? Aquí tú llevas el volante.
+            Fusionamos la energía de nuestras clases en vivo con la libertad de
+            tu estudio autónomo para que empieces a vivir el idioma. Desarrolla
+            un pensamiento crítico, gana una seguridad de acero al hablar y
+            prepárate para abrir las puertas que el mundo tiene para ti. Si
+            buscas resultados reales sin perder tu esencia, estás en el lugar
+            correcto.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {items.map(({ icon: Icon, title, description }, index) => (
             <motion.div
               key={title}
-              className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-sm flex flex-col gap-5"
+              className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-sm flex flex-col gap-5 "
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{
@@ -88,13 +90,13 @@ export default function Metodology() {
               }}
               viewport={{ once: true, margin: "-80px" }}
             >
-              <div className="w-12 h-12 rounded-xl bg-violet/10 flex items-center justify-center">
-                <Icon size={28} className="text-violet" />
+              <div className="flex flex-row gap-3 items-center justify-start mb-1">
+                <div className="w-12 h-12 rounded-xl bg-blue/10 flex items-center justify-center">
+                  <Icon size={32} className="text-blue" />
+                </div>
+                <h4>{title}</h4>
               </div>
-              <div>
-                <h4 className="mb-3">{title}</h4>
-                <p className="text-text/80 leading-snug">{description}</p>
-              </div>
+              <p className="text-text/80 leading-snug">{description}</p>
             </motion.div>
           ))}
         </div>

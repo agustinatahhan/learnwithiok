@@ -17,70 +17,89 @@ export function Navbar() {
   const pathname = usePathname();
 
   return (
-    <header className="fixed top-0 left-0 z-50 w-full flex justify-center">
-      <nav className="mx-2 sm:mx-8 md:mx-5 my-4 flex w-full flex-col rounded-4xl bg-bg/80 px-3 py-1.5 sm:px-6 sm:py-2 shadow-sm">
-        <div className="flex w-full items-center justify-between">
-          {/* LOGO */}
-          <Link href="/">
-            <div className="relative w-30 h-14">
-              <Image
-                src="/images/logo/logo.png"
-                alt="Logo learnwithiok"
-                fill
-                className="object-contain"
-                priority
-              />
+    <>
+      <header className="fixed top-0 left-0 z-50 w-full">
+        <div className="relative w-full h-21.25 lg:h-35" >
+          <svg
+            className="absolute inset-0 w-full h-full"
+            viewBox="0 0 1440 80"
+            xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="none"
+          >
+            <defs>
+              <linearGradient id="navGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="#be65b7" />
+                <stop offset="10%" stopColor="#9579b6" />
+                <stop offset="40%" stopColor="#9579b6" />
+                <stop offset="100%" stopColor="#0d47a1" />
+              </linearGradient>
+            </defs>
+            <path
+              d="M0,0 L1440,0 L1440,55 C1200,75 900,85 600,70 C300,55 150,50 0,65 Z"
+              fill="url(#navGrad)"
+            />
+          </svg>
+
+          <div className="relative z-10 flex items-center justify-between h-full px-4 sm:px-8" style={{ paddingBottom: "12px" }}>
+            <Link href="/">
+              <div className="relative w-14 h-14 lg:w-22 lg:h-22">
+                <Image
+                  src="/images/logo/logo-blanco.png"
+                  alt="Logo learnwithiok"
+                  fill
+                  className="object-contain"
+                  priority
+                />
+              </div>
+            </Link>
+
+            {/* DESKTOP nav items */}
+            <div className="hidden lg:flex items-center gap-2">
+              {navItems.map((item) => {
+                const isActive = pathname === item.href;
+                return (
+                  <Link
+                    key={item.key}
+                    href={item.href}
+                    className={`text-[15px] font-medium transition-all px-4 py-1.5 rounded-full ${
+                      isActive
+                        ? "border rounded-full text-white font-semibold"
+                        : "text-white hover:text-white/80"
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                );
+              })}
             </div>
-          </Link>
 
-          {/* DESKTOP */}
-          <div className="hidden lg:flex items-center gap-6">
-            {navItems.map((item) => {
-              const isActive = pathname === item.href;
-
-              return (
-                <Link
-                  key={item.key}
-                  href={item.href}
-                  className={`text-sm transition-all px-4 py-1.5 rounded-4xl ${
-                    isActive
-                      ? "bg-linear-to-r from-pink to-violet text-white font-semibold shadow-sm lg:text-[16px]"
-                      : "text-text/70 hover:text-violet font-medium lg:text-[16px]"
-                  }`}
-                >
-                  {item.label}
-                </Link>
-              );
-            })}
-          </div>
-
-          {/* MOBILE BUTTON */}
-          <div className="lg:hidden flex items-center">
-            <button
-              onClick={() => setIsOpen((p) => !p)}
-              className="p-2 text-violet"
-            >
-              <IoIosMenu size={20} />
-            </button>
+            {/* MOBILE BUTTON */}
+            <div className="lg:hidden flex items-center">
+              <button
+                onClick={() => setIsOpen((p) => !p)}
+                className="p-2 text-white"
+              >
+                <IoIosMenu size={26} />
+              </button>
+            </div>
           </div>
         </div>
-      </nav>
+      </header>
 
       {/* MOBILE MENU */}
-      {isOpen && (
-        <div className="fixed top-19.5 md:top-20.5 z-40 w-[95%] rounded-3xl bg-bg/80 p-3 shadow-sm lg:hidden">
+        {isOpen && (
+        <div className="fixed top-[80px] z-40 w-[95%] left-1/2 -translate-x-1/2 rounded-3xl bg-white/90 backdrop-blur-sm p-3 shadow-lg lg:hidden">
           {navItems.map((item) => {
             const isActive = pathname === item.href;
-
             return (
               <Link
                 key={item.key}
                 href={item.href}
                 onClick={() => setIsOpen(false)}
-                className={`block px-3 py-1.5 rounded-full mb-1 text-sm transition-all ${
+                className={`block px-4 py-2 rounded-full mb-1 text-sm transition-all ${
                   isActive
                     ? "bg-linear-to-r from-pink to-violet text-white font-semibold"
-                    : "text-text/70 font-medium"
+                    : "text-gray-700 font-medium hover:bg-violet-50 hover:text-violet-600"
                 }`}
               >
                 {item.label}
@@ -89,6 +108,6 @@ export function Navbar() {
           })}
         </div>
       )}
-    </header>
+    </>
   );
 }

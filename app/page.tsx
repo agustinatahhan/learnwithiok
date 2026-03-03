@@ -1,20 +1,20 @@
 import Audience from "@/components/ui/Audience/Audience";
-import Class from "@/components/ui/Class/Class";
 import Contact from "@/components/ui/Contact/Contact";
-import Divider from "@/components/ui/Divider/Divider";
 import Hero from "@/components/ui/Hero/Hero";
 import Metodology from "@/components/ui/Metodology/Metodology";
 import Services from "@/components/ui/Services/Services";
+import Testimonials from "@/components/ui/Testimonials/Testimonials";
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <Divider />
+      {/* <Divider /> */}
       <Metodology />
-      <Class />
+      {/* <Class /> */}
       <Services />
       <Audience />
+      <Testimonials />
       <Contact />
     </>
   );

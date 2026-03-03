@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { InlineWidget } from "react-calendly";
+import { FaLongArrowAltRight } from "react-icons/fa";
 import { HiOutlineSparkles, HiOutlineEnvelope } from "react-icons/hi2";
 
 const plans = [
@@ -46,9 +47,9 @@ export default function Agenda() {
               Agendá tu clase
             </p>
             <h2 className="mb-4">¿Cómo empezar?</h2>
-            <p className="text-text/80">
+            {/* <p className="text-text/80">
               Seguí estos pasos y en minutos tenés tu clase reservada.
-            </p>
+            </p> */}
           </motion.div>
 
           <motion.div
@@ -58,9 +59,9 @@ export default function Agenda() {
             transition={{ duration: 0.7 }}
             viewport={{ once: true }}
           >
-            <p className="text-sm font-semibold uppercase tracking-widest text-violet">
+            {/* <p className="text-sm font-semibold uppercase tracking-widest text-violet">
               Pasos a seguir
-            </p>
+            </p> */}
 
             <motion.div
               className="flex gap-5"
@@ -106,7 +107,7 @@ export default function Agenda() {
                       viewport={{ once: true, margin: "-40px" }}
                     >
                       {highlight && (
-                        <span className="absolute -top-3 left-5 bg-pink text-white text-xs font-semibold px-3 py-1 rounded-full flex items-center gap-1 whitespace-nowrap">
+                        <span className="absolute -top-3 left-5 bg-violet text-white text-xs font-semibold px-3 py-1 rounded-full flex items-center gap-1 whitespace-nowrap">
                           <HiOutlineSparkles size={12} />
                           Más popular
                         </span>
@@ -128,8 +129,31 @@ export default function Agenda() {
                 )}
               </div>
             </motion.div>
-
             <motion.div
+              className="flex gap-5"
+              initial={{ opacity: 0, x: -16 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
+              viewport={{ once: true, margin: "-40px" }}
+            >
+              <div className="shrink-0 w-10 h-10 rounded-full gradient flex items-center justify-center text-white text-sm font-bold">
+                02
+              </div>
+              <div className="pt-1.5 flex-1">
+                <h4>
+                  Completá este formulario y me contactaré con vos en 48hs
+                  hábiles.
+                </h4>
+                <a
+                  className="btn btn-colors mt-6 flex flex-row gap-3 items-center justify-center"
+                  href="https://forms.gle/EedqNB3kzVyoAjsQ7"
+                >
+                  <FaLongArrowAltRight />
+                  Formulario
+                </a>
+              </div>
+            </motion.div>
+            {/* <motion.div
               className="flex gap-5"
               initial={{ opacity: 0, x: -16 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -142,8 +166,8 @@ export default function Agenda() {
               <div className="pt-1.5 flex-1">
                 <h4>Seleccioná tu día y horario</h4>
               </div>
-            </motion.div>
-            <motion.div
+            </motion.div> */}
+            {/* <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7 }}
@@ -157,9 +181,9 @@ export default function Agenda() {
                   width: "100%",
                 }}
               />
-            </motion.div>
+            </motion.div> */}
 
-            <motion.div
+            {/* <motion.div
               className="flex gap-5"
               initial={{ opacity: 0, x: -16 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -188,9 +212,9 @@ export default function Agenda() {
                   </p>
                 </div>
               </div>
-            </motion.div>
+            </motion.div> */}
 
-            <motion.div
+            {/* <motion.div
               className="flex gap-5"
               initial={{ opacity: 0, x: -16 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -212,7 +236,7 @@ export default function Agenda() {
                   </a>
                 </p>
               </div>
-            </motion.div>
+            </motion.div> */}
           </motion.div>
         </div>
       </div>

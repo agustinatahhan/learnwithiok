@@ -2,9 +2,9 @@
 
 @theme {
   --font-sans: var(--font-signika);
-  --color-pink: #db73b2;
+  --color-pink: #be65b7;
   --color-violet: #9579b6;
-  --color-blue: #2e78b7;
+  --color-blue: #0d47a1;
   --color-text: #111827;
   --color-bg: #f8fafc;
 }
@@ -31,11 +31,11 @@ body {
 
 @layer base {
   h1 {
-    @apply text-4xl md:text-6xl font-bold tracking-tight text-center lg:text-start;
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-start;
   }
 
   h2 {
-    @apply text-text text-[28px] lg:text-5xl font-bold leading-tight text-start;
+    @apply text-text text-4xl lg:text-5xl font-bold leading-tight;
   }
 
   h3 {
@@ -73,21 +73,21 @@ body {
            hover:scale-105 active:scale-95 cursor-pointer;
   }
   .btn-colors {
-    @apply bg-linear-to-r from-pink to-violet;
+    @apply bg-linear-to-r from-blue to-violet;
   }
 
   .gradient {
-     @apply bg-linear-to-r from-pink to-violet;
+     @apply bg-linear-to-r from-blue to-violet;
   }
   .btn-blue {
-    @apply bg-[#2e78b7] hover:bg-[#2e78b7]/70;
+    @apply bg-blue hover:bg-blue/70;
   }
 
   .btn-violet {
-    @apply bg-[#9579b6] hover:bg-[#9579b6]/70;
+    @apply bg-violet hover:bg-violet/70;
   }
 
   .btn-pink {
-    @apply bg-[#db73b2] hover:bg-[#db73b2]/70;
+    @apply bg-pink hover:bg-pink/70;
   }
 }

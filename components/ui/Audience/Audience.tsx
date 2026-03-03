@@ -10,36 +10,42 @@ import {
 } from "react-icons/hi2";
 import { motion } from "framer-motion";
 
-const audience = [
+const items = [
   {
     icon: HiOutlineGlobeAlt,
-    text: "Vivís en el extranjero y querés comunicarte con seguridad.",
+    title: "Confianza total",
+    text: "Pierde el miedo a hablar y cometer errores. Suéltate y comunícate con seguridad desde el día uno.",
   },
   {
     icon: HiOutlineUserGroup,
-    text: "Te gusaría interactuar con gente que vive en el extrajero o en tu pais",
+    title: "Pronunciación natural",
+    text: "Aprende a hablar con una dicción clara y auténtica para que te entiendan sin esfuerzo en cualquier conversación.",
   },
   {
     icon: HiOutlineBriefcase,
-    text: "Buscás oportunidades laborales internacionales.",
+    title: "Inglés para el mundo real",
+    text: "Domina el idioma que necesitas para viajar, trabajar internacionalmente y conectarte con personas de todo el mundo.",
   },
   {
     icon: HiOutlineComputerDesktop,
-    text: "Trabajás remoto y necesitás inglés.",
+    title: "Entorno seguro y motivador",
+    text: "Un espaci de aprendizaje sin juicios, diseñado para aprender, reír y crecer juntos, donde equivocarse es parte del éxito.",
   },
   {
     icon: HiOutlineChatBubbleLeftRight,
-    text: "Querés dejar de bloquearte cuando hablás.",
+    title: "Proceso visible clase a clase",
+    text: "Resultados tangibles. Sentirás cómo tu nivel avanza y tu fluidez mejora semana tras semana.",
   },
   {
     icon: HiOutlineArrowTrendingUp,
-    text: 'Querés pasar del "entiendo pero no hablo" al "me animo".',
+    title: "Metas alcanzadas",
+    text: "Consigue tus objetivos, ya sea un examen, entrevista de trabajo o simplemente sentirte bilingüe.",
   },
 ];
 
 export default function Audience() {
   return (
-    <section className="bg-linear-to-r from-blue/30 via-pink/30 to-violet/30 padding">
+    <section className="bg-linear-to-r from-violet/20 to-blue/20 padding">
       <div className="ctn ctn-margin">
         <motion.div
           className="mb-16"
@@ -48,28 +54,35 @@ export default function Audience() {
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
         >
-          <h2 className="mb-6">¿Para quién es Learn With IOK?</h2>
+          <h2 className="mb-6">Lo que lograrás después de las clases</h2>
         </motion.div>
 
-        <ul className="flex flex-col md:grid md:grid-cols-2 gap-4 mb-12">
-          {audience.map(({ icon: Icon, text }, index) => (
-            <motion.li
-              key={index}
-              className="flex items-center gap-4 bg-white/50 border border-white/60 rounded-2xl min-h-28 p-6"
-              initial={{ opacity: 0, y: 20 }}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          {items.map(({ icon: Icon, title, text }, index) => (
+            <motion.div
+              key={title}
+              className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-sm flex flex-col gap-5"
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
-              viewport={{ once: true }}
+              transition={{
+                duration: 0.5,
+                delay: index * 0.07,
+                ease: "easeOut",
+              }}
+              viewport={{ once: true, margin: "-80px" }}
             >
-              <div className="shrink-0 w-10 h-10 rounded-full bg-violet/80 flex items-center justify-center">
-                <Icon className="text-white" size={20} />
+              <div className="flex flex-row gap-3 items-center justify-start mb-1">
+                <div className="w-12 h-12 rounded-xl bg-blue/10 flex items-center justify-center">
+                  <Icon size={32} className="text-blue" />
+                </div>
+                <h4>{title}</h4>
               </div>
-              <p className="text-text/80 leading-relaxed">{text}</p>
-            </motion.li>
+              <p className="text-text/80 leading-snug">{text}</p>
+            </motion.div>
           ))}
-        </ul>
+        </div>
 
-        <motion.p
+        {/* <motion.p
           className="italic"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -77,7 +90,7 @@ export default function Audience() {
           viewport={{ once: true }}
         >
           ¡No importa tu punto de partida. Importa que quieras avanzar!
-        </motion.p>
+        </motion.p> */}
       </div>
     </section>
   );
