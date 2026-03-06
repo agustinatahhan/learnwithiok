@@ -9,6 +9,7 @@ import {
   HiOutlineUsers,
 } from "react-icons/hi2";
 import { motion } from "framer-motion";
+import { TbCalendarStats } from "react-icons/tb";
 
 const items = [
   {
@@ -61,21 +62,26 @@ export default function Metodology() {
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
         >
-          {/* <p className="text-blue text-sm font-semibold uppercase tracking-widest mb-3">
-            Metodología
-          </p> */}
-          <h2 className="mb-6">Tu ritmo, tus reglas</h2>
-          <p className="text-text/80 leading-relaxed">
-            ¿Cansado de los métodos rígidos? Aquí tú llevas el volante.
-            Fusionamos la energía de nuestras clases en vivo con la libertad de
-            tu estudio autónomo para que empieces a vivir el idioma. Desarrolla
-            un pensamiento crítico, gana una seguridad de acero al hablar y
-            prepárate para abrir las puertas que el mundo tiene para ti. Si
-            buscas resultados reales sin perder tu esencia, estás en el lugar
-            correcto.
+          <h2 className="mb-10 md:mb-14 text-start flex items-center justify-center gap-4">
+            <TbCalendarStats
+              color="#9579b6"
+              className="inline text-6xl md:text-7xl"
+            />
+            Tu ritmo, tus reglas{" "}
+          </h2>
+          <p className="text-text/80 ">
+            <strong className="text-xl">¿Cansado de los métodos rígidos?</strong> En este espacio,
+            vos tenés el control. Implementamos la metodología de flipped
+            classroom (clase invertida): preparás el contenido de manera
+            autónoma a tus propios tiempos y usamos nuestros encuentros en vivo
+            exclusivamente para que te sueltes a hablar. Combinamos sesiones
+            dinámicas con la flexibilidad que buscás para aprender a tu manera.
+            <br />
+            Desarrollá <strong>tu pensamiento crítico</strong>, ganá seguridad y
+            prepárate para que el futuro te encuentre hablando un{" "}
+            <strong>inglés fluido.</strong>
           </p>
         </motion.div>
-
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {items.map(({ icon: Icon, title, description }, index) => (
             <motion.div
@@ -96,7 +102,7 @@ export default function Metodology() {
                 </div>
                 <h4>{title}</h4>
               </div>
-              <p className="text-text/80 leading-snug">{description}</p>
+              <p className="text-text/80 ">{description}</p>
             </motion.div>
           ))}
         </div>

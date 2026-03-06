@@ -30,12 +30,13 @@ const items = [
       "Querés sentir comunidad mientras aprendés",
     ],
   },
-   {
+  {
     img: "/images/services/conv.jpg",
     title: "Club de Conversación",
     badge: "Coversación",
-    description: " Clases 100 % habladas, dinámicas y divertidas para mejorar tu inglés desde el primer minuto.",
-    label: "Lo que vas a conseguir:",
+    description:
+      " Clases 100 % habladas, dinámicas y divertidas para mejorar tu inglés desde el primer minuto.",
+    label: "Clases enfocadas en:",
     bullets: [
       "Habla real: Conversaciones auténticas como en la vida diaria o el trabajo.",
       "Confianza total: Expresarte sin miedo y con seguridad.",
@@ -85,50 +86,57 @@ export default function Services() {
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
         >
-          <h2>Elegí tu experiencia de aprendizaje</h2>
+          <h2 className="text-center mb-10 md:mb-14">Elegí tu experiencia de aprendizaje</h2>
         </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-          {items.map(({ img, title, badge, description, label, bullets }, index) => (
-            <motion.div
-              key={title}
-              className="bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow flex flex-col overflow-hidden"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.12, ease: "easeOut" }}
-              viewport={{ once: true }}
-            >
-              <div className="relative w-full h-60">
-                <Image src={img} alt={title} fill className="object-cover" />
-                <span className="absolute top-3 left-3 bg-linear-to-r from-blue to-violet text-white text-xs font-semibold px-3 py-1 rounded-full shadow-sm">
-                  {badge}
-                </span>
-              </div>
-
-              <div className="flex flex-col gap-6 p-5 flex-1">
-                <div>
-                  <h4>{title}</h4>
-                </div>
-                <div>
-                  <p className="font-normal">{description}</p>
+          {items.map(
+            ({ img, title, badge, description, label, bullets }, index) => (
+              <motion.div
+                key={title}
+                className="bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow flex flex-col overflow-hidden"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.6,
+                  delay: index * 0.12,
+                  ease: "easeOut",
+                }}
+                viewport={{ once: true }}
+              >
+                <div className="relative w-full h-60">
+                  <Image src={img} alt={title} fill className="object-cover" />
+                  <span className="absolute top-3 left-3 bg-linear-to-r from-blue to-violet text-white text-sm font-semibold w-24 py-1 flex items-center justify-center rounded-full shadow-sm">
+                    {badge}
+                  </span>
                 </div>
 
-                <div className="pt-3 border-t border-blue/20">
-                  <p className="text-blue lg:text-[20px] font-bold mb-3">
-                    {label}
-                  </p>
-                  <ul className="flex flex-col gap-1.5">
-                    {bullets.map((b) => (
-                      <li key={b} className="flex items-start gap-2 lg:text-[20px]">
-                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue/40 flex-shrink-0" />
-                        {b}
-                      </li>
-                    ))}
-                  </ul>
+                <div className="flex flex-col gap-6 p-5 flex-1">
+                  <div>
+                    <h4 className="text-blue">{title}</h4>
+                  </div>
+                  <div>
+                    <p className="font-normal">{description}</p>
+                  </div>
+
+                  <div className="pt-3 border-t border-blue/20">
+                    <p className=" lg:text-[18px]  mb-3">{label}</p>
+                    <ul className="flex flex-col gap-1.5">
+                      {bullets.map((b) => (
+                        <li
+                          key={b}
+                          className="flex items-start gap-2 lg:text-[18px]"
+                        >
+                          <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue/40 flex-shrink-0" />
+                          {b}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            ),
+          )}
         </div>
       </div>
     </section>

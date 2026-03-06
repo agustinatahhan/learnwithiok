@@ -42,9 +42,9 @@ export function Navbar() {
 
           <div className="relative z-10 flex items-center justify-between h-full px-4 sm:px-8" style={{ paddingBottom: "12px" }}>
             <Link href="/">
-              <div className="relative w-14 h-14 lg:w-22 lg:h-22">
+              <div className="relative w-20 h-20 lg:w-44 lg:h-44">
                 <Image
-                  src="/images/logo/logo-blanco.png"
+                  src="/images/logo/logonav.png"
                   alt="Logo learnwithiok"
                   fill
                   className="object-contain"
@@ -54,17 +54,17 @@ export function Navbar() {
             </Link>
 
             {/* DESKTOP nav items */}
-            <div className="hidden lg:flex items-center gap-2">
+            <div className="hidden lg:flex items-center gap-2 lg:gap-12">
               {navItems.map((item) => {
                 const isActive = pathname === item.href;
                 return (
                   <Link
                     key={item.key}
                     href={item.href}
-                    className={`text-[15px] font-medium transition-all px-4 py-1.5 rounded-full ${
+                    className={`text-[17px] font-medium transition-all px-4 py-1.5 rounded-full ${
                       isActive
                         ? "border rounded-full text-white font-semibold"
-                        : "text-white hover:text-white/80"
+                        : "text-white hover:text-white/80 "
                     }`}
                   >
                     {item.label}

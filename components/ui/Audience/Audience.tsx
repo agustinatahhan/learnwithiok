@@ -54,7 +54,7 @@ export default function Audience() {
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
         >
-          <h2 className="mb-6">Lo que lograrás después de las clases</h2>
+          <h2 className="mb-10 md:mb-14 text-center">Lo que lograrás después de las clases</h2>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
