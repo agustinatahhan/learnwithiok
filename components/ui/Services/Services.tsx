@@ -2,13 +2,14 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { TfiWrite } from "react-icons/tfi";
 
 const items = [
   {
-    img: "/images/services/individual.jpg",
-    title: "Clases Individuales de inglés general",
+    img: "/images/services/clase1.png",
+    title: "Sesión Individual",
     badge: "1:1",
-    description: "Sesiones totalmente adaptadas a tu nivel, ritmo y objetivos.",
+    description: "Clases 1:1 adaptadas a tu nivel, ritmo y objetivos.",
     label: "Ideales si:",
     bullets: [
       "Querés avanzar más rápido",
@@ -18,10 +19,10 @@ const items = [
     ],
   },
   {
-    img: "/images/services/group.png",
-    title: "Clases en Grupos Reducidos de inglés general",
+    img: "/images/services/grupal.png",
+    title: "Inglés General Grupal",
     badge: "Grupos",
-    description: "Grupos pequeños, ambiente cálido y participativo.",
+    description: "Máximo 6 personas, ambiente cálido y participativo.",
     label: "Ideales si:",
     bullets: [
       "Te motiva aprender con otros",
@@ -31,18 +32,18 @@ const items = [
     ],
   },
   {
-    img: "/images/services/conv.jpg",
+    img: "/images/services/conversacion.png",
     title: "Club de Conversación",
     badge: "Coversación",
     description:
-      " Clases 100 % habladas, dinámicas y divertidas para mejorar tu inglés desde el primer minuto.",
+      "Grupos máximo 6 personas. \nNiveles: intermedio A2/B1, avanzado B1+/B2",
     label: "Clases enfocadas en:",
     bullets: [
-      "Habla real: Conversaciones auténticas como en la vida diaria o el trabajo.",
-      "Confianza total: Expresarte sin miedo y con seguridad.",
-      "Fluidez rápida: Practica hablar sin pausas ni bloqueos.",
-      "Temas actuales: Noticias, cultura, tendencias",
-      "Corrección útil: Feedback inmediato y personalizado para mejorar cada día.",
+      "Conversaciones reales",
+      "Pronunciación",
+      "Temas actuales",
+      "Expresiones y vocabulario",
+      "Mejorar tu fluidez",
     ],
   },
   {
@@ -62,9 +63,10 @@ const items = [
   },
   {
     img: "/images/services/exam.jpg",
-    title: "Preparación para Exámenes - IELTS y Cambridge",
+    title: "Preparación para Exámenes",
     badge: "Exámenes",
-    description: "Preparación personalizada para distintos niveles.",
+    description:
+      "IELTS y Cambridge. \nNiveles: intermedio A2/B1, avanzado B1+/B2",
     label: "Trabajo con:",
     bullets: [
       "Estrategias específicas",
@@ -80,13 +82,24 @@ export default function Services() {
     <section className="bg-linear-to-b from-violet/15 to-bg padding">
       <div className="ctn ctn-margin">
         <motion.div
-          className="mb-16"
+          className="mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-center mb-10 md:mb-14">Elegí tu experiencia de aprendizaje</h2>
+          <h2 className="mb-10 md:mb-14 flex items-start md:items-center justify-center gap-1 md:gap-4 lg:gap-6">
+            <TfiWrite
+              color="#9579b6"
+              className="inline text-4xl md:text-5xl lg:text-7xl shrink-0"
+            />
+            Elegí tu experiencia de aprendizaje
+          </h2>
+          <p className="text-text/80 ">
+            Diseñamos la experiencia que mejor se adapte a tu estilo de vida
+            para que empieces a hablar inglés con seguridad desde el primer día.
+            Vos ponés el objetivo, nosotros el plan.
+          </p>
         </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
@@ -116,7 +129,9 @@ export default function Services() {
                     <h4 className="text-blue">{title}</h4>
                   </div>
                   <div>
-                    <p className="font-normal">{description}</p>
+                    <p className="font-normal whitespace-pre-line">
+                      {description}
+                    </p>
                   </div>
 
                   <div className="pt-3 border-t border-blue/20">

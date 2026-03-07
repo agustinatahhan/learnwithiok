@@ -1,45 +1,44 @@
 "use client";
 
-import {
-  HiOutlineGlobeAlt,
-  HiOutlineBriefcase,
-  HiOutlineComputerDesktop,
-  HiOutlineChatBubbleLeftRight,
-  HiOutlineArrowTrendingUp,
-  HiOutlineUserGroup,
-} from "react-icons/hi2";
+import { ImUserCheck } from "react-icons/im";
+import { RiChatCheckLine } from "react-icons/ri";
+import { TbWorldCheck } from "react-icons/tb";
+import { FaPeopleRoof } from "react-icons/fa6";
+import { LuBookOpenCheck } from "react-icons/lu";
+import { GrAchievement } from "react-icons/gr";
+
 import { motion } from "framer-motion";
 
 const items = [
   {
-    icon: HiOutlineGlobeAlt,
-    title: "Confianza total",
-    text: "Pierde el miedo a hablar y cometer errores. Suéltate y comunícate con seguridad desde el día uno.",
+    icon: ImUserCheck,
+    // title: "Confianza total",
+    text: "Confianza y autonomía al expresante en inglés",
   },
   {
-    icon: HiOutlineUserGroup,
-    title: "Pronunciación natural",
-    text: "Aprende a hablar con una dicción clara y auténtica para que te entiendan sin esfuerzo en cualquier conversación.",
+    icon: RiChatCheckLine,
+    // title: "Pronunciación natural",
+    text: "Uso de estructuras consciente y mejor pronunciación",
   },
   {
-    icon: HiOutlineBriefcase,
-    title: "Inglés para el mundo real",
-    text: "Domina el idioma que necesitas para viajar, trabajar internacionalmente y conectarte con personas de todo el mundo.",
+    icon: TbWorldCheck,
+    // title: "Inglés para el mundo real",
+    text: "Dominar el inglés en entornos multiculturales",
   },
   {
-    icon: HiOutlineComputerDesktop,
-    title: "Entorno seguro y motivador",
-    text: "Un espaci de aprendizaje sin juicios, diseñado para aprender, reír y crecer juntos, donde equivocarse es parte del éxito.",
+    icon: FaPeopleRoof,
+    // title: "Entorno seguro y motivador",
+    text: "Sentirte en un lugar seguro y motivador",
   },
   {
-    icon: HiOutlineChatBubbleLeftRight,
-    title: "Proceso visible clase a clase",
-    text: "Resultados tangibles. Sentirás cómo tu nivel avanza y tu fluidez mejora semana tras semana.",
+    icon: LuBookOpenCheck,
+    // title: "Proceso visible clase a clase",
+    text: "Notarás tu progreso con resultados tangibles",
   },
   {
-    icon: HiOutlineArrowTrendingUp,
-    title: "Metas alcanzadas",
-    text: "Consigue tus objetivos, ya sea un examen, entrevista de trabajo o simplemente sentirte bilingüe.",
+    icon: GrAchievement,
+    // title: "Metas alcanzadas",
+    text: "Pensar en inglés sin que se sienta como “estudiar”",
   },
 ];
 
@@ -54,13 +53,13 @@ export default function Audience() {
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
         >
-          <h2 className="mb-10 md:mb-14 text-center">Lo que lograrás después de las clases</h2>
+          <h2 className="mb-10 md:mb-14 text-center">¿Qué lograrás con las clases?</h2>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {items.map(({ icon: Icon, title, text }, index) => (
+          {items.map(({ icon: Icon,  text }, index) => (
             <motion.div
-              key={title}
+              key={index}
               className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-sm flex flex-col gap-5"
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -71,11 +70,11 @@ export default function Audience() {
               }}
               viewport={{ once: true, margin: "-80px" }}
             >
-              <div className="flex flex-row gap-3 items-center justify-start mb-1">
-                <div className="w-12 h-12 rounded-xl bg-blue/10 flex items-center justify-center">
-                  <Icon size={32} className="text-blue" />
+              <div className="flex flex-row gap-3 items-center justify-center mb-1">
+                <div className="flex items-center justify-center">
+                  <Icon size={50} className="text-blue" />
                 </div>
-                <h4>{title}</h4>
+                {/* <h4>{title}</h4> */}
               </div>
               <p className="text-text/80 leading-snug">{text}</p>
             </motion.div>

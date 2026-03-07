@@ -7,12 +7,12 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="relative w-full min-h-screen flex items-center padding">
+    <section className="relative w-full min-h-screen flex items-center padding bg-bg">
       <div className="ctn ctn-margin">
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-10 lg:gap-20">
           <div className="relative w-full h-72 sm:h-96 lg:h-130">
             <Image
-              src="/images/hero/hero-photo.png"
+              src="/images/hero/hero.png"
               alt="Imagen Karen"
               fill
               priority

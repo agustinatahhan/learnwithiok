@@ -31,11 +31,11 @@ body {
 
 @layer base {
   h1 {
-    @apply text-4xl md:text-7xl font-bold tracking-tight text-start;
+    @apply text-4xl md:text-6xl font-bold tracking-tight text-start;
   }
 
   h2 {
-    @apply text-text text-3xl md:text-5xl lg:text-6xl font-bold leading-tight;
+    @apply text-text text-3xl md:text-3xl lg:text-6xl font-bold leading-tight;
   }
 
   h3 {
@@ -45,9 +45,9 @@ body {
   h4 {
     @apply text-text font-bold text-lg lg:text-2xl;
   }
-
   p {
-    @apply text-base md:text-[20px] font-normal text-start hyphens-auto;
+     @apply text-base md:text-[20px] font-normal hyphens-auto;
+    text-align: justify;
   }
 }
 
