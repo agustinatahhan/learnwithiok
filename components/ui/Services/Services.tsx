@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { TfiWrite } from "react-icons/tfi";
+import { LuNotebookPen } from "react-icons/lu";
 
 const items = [
   {
@@ -89,16 +89,16 @@ export default function Services() {
           viewport={{ once: true }}
         >
           <h2 className="mb-10 md:mb-14 flex items-start md:items-center justify-center gap-1 md:gap-4 lg:gap-6">
-            <TfiWrite
+            <LuNotebookPen
               color="#9579b6"
               className="inline text-4xl md:text-5xl lg:text-7xl shrink-0"
             />
             Elegí tu experiencia de aprendizaje
           </h2>
           <p className="text-text/80 ">
-            Diseñamos la experiencia que mejor se adapte a tu estilo de vida
+            Diseñamos la experiencia <strong>que mejor se adapte a tu estilo de vida </strong>
             para que empieces a hablar inglés con seguridad desde el primer día.
-            Vos ponés el objetivo, nosotros el plan.
+            <strong>Vos ponés el objetivo, nosotros el plan.</strong>
           </p>
         </motion.div>
 

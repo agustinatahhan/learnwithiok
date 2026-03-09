@@ -1,35 +1,64 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { InlineWidget } from "react-calendly";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { HiOutlineSparkles, HiOutlineEnvelope } from "react-icons/hi2";
+import { BsSuitcaseLg } from "react-icons/bs";
+import { IoPersonOutline } from "react-icons/io5";
+import { HiOutlineSpeakerphone } from "react-icons/hi";
+import { GrGroup } from "react-icons/gr";
 
 const plans = [
   {
-    label: "Clase individual",
-    price: "18 €",
-    per: "por clase",
+    icon: HiOutlineSpeakerphone,
+    label: "Club de Conversación (Tu prioridad)",
+    individual: "Sesión Individual:",
+    price: "15 €.",
+    pack1: 'Pack "Conversationalist" (10 sesiones):',
+    price1: "90 €.",
+    note: "Ventaja: Te sale a solo 9 € por clase. Ideal para mantener el ritmo semanalmente.",
     highlight: false,
-    description: "Perfecta para probar y avanzar a tu ritmo.",
+    description: "Enfocado en soltura y networking. Grupos de 5 a 8 personas.",
   },
   {
-    label: "Pack 5 clases",
-    price: "15 €",
-    per: "por clase",
-    highlight: true,
-    description: "El equilibrio ideal entre flexibilidad y ahorro.",
+    icon: GrGroup,
+    label: "Curso General English (3O sesiones?)",
+    individual: "Pago Mensual:",
+    price: "120 € por bloque de 10 sesiones.",
+    pack1: 'Pack "Full Level" (Pago único 3 meses):',
+    price1: "320 € (Ahorras 40 €).",
+    note: "Nota: Este pack garantiza tu plaza y material por todo el trimestre.",
+    highlight: false,
+    description:
+      "Para los que quieren subir de nivel con estructura. Grupos de 5 personas. Sesiones de 1:30h.",
   },
   {
-    label: "Pack 10 clases",
-    price: "12 €",
-    per: "por clase",
+    icon: IoPersonOutline,
+    label: "Clases Privadas (Individuales)",
+    individual: "Clase Suelta:",
+    price: "20 €.",
+    pack1: "Pack de 5 clases:",
+    price1: "90 € (18 €/h).",
+    pack2: "Pack de 10 clases:",
+    price2: "60 € (16 €/h).",
     highlight: false,
-    description: "El mayor ahorro para un compromiso real con el idioma.",
+    description: "Atención 100% personalizada. Duración: 1 hora.",
+  },
+  {
+    icon: BsSuitcaseLg,
+    label: "Business English & Prep. Exámenes",
+    individual: "Clase Suelta:",
+    price: "25 €.",
+    pack1: "Pack de 10 clases:",
+    price1: "220 € (22 €/h).",
+    note: "Sugerencia: Este pack es el más buscado por profesionales que necesitan resultados rápidos.",
+    highlight: false,
+    description:
+      "Inglés especializado para trabajo o certificaciones oficiales. Duración: 1 hora.",
   },
 ];
 
-const CALENDLY_URL = "https://calendly.com/learnwithiok";
+// const CALENDLY_URL = "https://calendly.com/learnwithiok";
 
 export default function Agenda() {
   return (
@@ -87,15 +116,30 @@ export default function Agenda() {
               {/* <p className="text-sm font-semibold uppercase tracking-widest text-violet mb-5">
             Planes disponibles
           </p> */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 {plans.map(
-                  ({ label, price, per, highlight, description }, index) => (
+                  (
+                    {
+                      icon: Icon,
+                      label,
+                      price,
+                      price1,
+                      price2,
+                      pack1,
+                      pack2,
+                      individual,
+                      highlight,
+                      description,
+                      note,
+                    },
+                    index,
+                  ) => (
                     <motion.div
                       key={label}
-                      className={`relative rounded-2xl p-6 flex flex-col gap-2 border transition-all ${
+                      className={`relative rounded-2xl flex flex-col overflow-hidden border transition-all ${
                         highlight
-                          ? "bg-white border-violet shadow-md shadow-violet/10"
-                          : "bg-white border-text/10 shadow-sm"
+                          ? "border-violet shadow-lg shadow-violet/15"
+                          : "border-text/10 shadow-sm"
                       }`}
                       initial={{ opacity: 0, y: 16 }}
                       whileInView={{ opacity: 1, y: 0 }}
@@ -106,24 +150,82 @@ export default function Agenda() {
                       }}
                       viewport={{ once: true, margin: "-40px" }}
                     >
-                      {highlight && (
-                        <span className="absolute -top-3 left-5 bg-violet text-white text-xs font-semibold px-3 py-1 rounded-full flex items-center gap-1 whitespace-nowrap">
-                          <HiOutlineSparkles size={12} />
-                          Más popular
-                        </span>
-                      )}
-                      <p className="text-sm font-semibold uppercase tracking-widest text-violet">
-                        {label}
-                      </p>
-                      <div className="flex items-end gap-1">
-                        <span className="text-4xl font-bold leading-none text-text">
-                          {price}
-                        </span>
-                        <span className="text-sm mb-1 text-text/50">{per}</span>
+                      {/* Header */}
+                      <div
+                        className={`px-6 pt-6 pb-5 ${highlight ? "bg-violet/5" : "bg-white"}`}
+                      >
+                        {highlight && (
+                          <span className="inline-flex items-center gap-1 bg-violet text-white text-xs font-semibold px-3 py-1 rounded-full mb-3">
+                            <HiOutlineSparkles size={11} />
+                            Más popular
+                          </span>
+                        )}
+                        <div className="flex flex-row items-center gap-3 mb-1">
+                           <Icon size={20} className="text-blue" />
+                          <p
+                            className={`text-[16px] font-bold uppercase tracking-widest  ${highlight ? "text-violet" : "text-blue"}`}
+                          >
+                            {label}
+                          </p>
+                        </div>
+                        <p className="text-sm text-text/60 leading-relaxed">
+                          {description}
+                        </p>
                       </div>
-                      <p className="text-sm text-text/60 leading-snug">
-                        {description}
-                      </p>
+
+                      {/* Divider */}
+                      <div
+                        className={`h-px ${highlight ? "bg-violet/15" : "bg-text/8"}`}
+                      />
+
+                      {/* Pricing rows */}
+                      <div className="bg-white px-6 py-5 flex flex-col gap-3 flex-1">
+                        {/* Individual */}
+                        <div className="flex items-center justify-between">
+                          <span className="text-sm text-text/70">
+                            {individual}
+                          </span>
+                          <span
+                            className={`text-sm font-semibold ${highlight ? "text-violet" : "text-text"}`}
+                          >
+                            {price}
+                          </span>
+                        </div>
+
+                        {/* Pack 1 */}
+                        <div className="flex items-center justify-between">
+                          <span className="text-sm text-text/70">{pack1}</span>
+                          <span
+                            className={`text-sm font-semibold ${highlight ? "text-violet" : "text-text"}`}
+                          >
+                            {price1}
+                          </span>
+                        </div>
+
+                        {/* Pack 2 (optional) */}
+                        {pack2 && (
+                          <div className="flex items-center justify-between">
+                            <span className="text-sm text-text/70">
+                              {pack2}
+                            </span>
+                            <span
+                              className={`text-sm font-semibold ${highlight ? "text-violet" : "text-text"}`}
+                            >
+                              {price2}
+                            </span>
+                          </div>
+                        )}
+
+                        {/* Note */}
+                        {note && (
+                          <>
+                            <div className="h-px bg-text/6 mt-1" />
+                            <p className="text-xs text-text/50 leading-relaxed">
+                              {note}
+                            </p>
+                          </>
+                        )}
+                      </div>
                     </motion.div>
                   ),
                 )}

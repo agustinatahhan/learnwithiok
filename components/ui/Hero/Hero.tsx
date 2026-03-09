@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="relative w-full min-h-screen flex items-center padding bg-bg">
+    <section className="relative w-full min-h-screen flex items-center padding bg-violet/15">
       <div className="ctn ctn-margin">
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-10 lg:gap-20">
           <div className="relative w-full h-72 sm:h-96 lg:h-130">

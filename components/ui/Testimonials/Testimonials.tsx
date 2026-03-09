@@ -7,6 +7,12 @@ import Image from "next/image";
 
 const items = [
   {
+    name: "Elton",
+    image: "/images/testimonials/elton.png",
+    tagline: "Actor profesional, ecuatoriano en España, 2024",
+    text: "Excelente profesora con una metodología online muy efectiva. Tras completar dos cursos con Karen, destaco su gran disposición, amabilidad y capacidad para estar siempre atenta al progreso del alumno. Sin duda, una opción de confianza para aprender inglés."
+  },
+  {
     name: "Carolina",
     image: "/images/testimonials/carolina.jpeg",
     tagline: "Economista, venezolana en Barcelona, 2026",

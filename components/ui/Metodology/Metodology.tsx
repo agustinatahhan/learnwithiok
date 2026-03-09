@@ -3,9 +3,9 @@
 import { HiOutlineUsers } from "react-icons/hi2";
 import { AiOutlineLaptop } from "react-icons/ai";
 import { LiaChalkboardTeacherSolid } from "react-icons/lia";
-import { RiBookShelfFill } from "react-icons/ri";
 import { PiExam } from "react-icons/pi";
 import { RiSpeakAiLine } from "react-icons/ri";
+import { TbBooks } from "react-icons/tb";
 
 import { motion } from "framer-motion";
 import { TbCalendarStats } from "react-icons/tb";
@@ -25,7 +25,7 @@ const items = [
       "Prepara las clases con anticipación para optimizar tu tiempo en el encuentro en vivo.",
   },
   {
-    icon: RiBookShelfFill,
+    icon: TbBooks,
     title: "Material",
     description:
       "En línea incluido en plataforma (PDFs descargables, videos, presentaciones de la clase, etc) . Contenido actualizado y adaptado según tus objetivos y nivel actual.",
