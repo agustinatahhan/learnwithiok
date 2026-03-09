@@ -163,7 +163,7 @@ export default function Agenda() {
                         <div className="flex flex-row items-center gap-3 mb-1">
                            <Icon size={20} className="text-blue" />
                           <p
-                            className={`text-[16px] font-bold uppercase tracking-widest  ${highlight ? "text-violet" : "text-blue"}`}
+                            className={`text-sm md:text-[16px] font-bold uppercase tracking-widest  ${highlight ? "text-violet" : "text-blue"}`}
                           >
                             {label}
                           </p>
