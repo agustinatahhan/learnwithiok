@@ -2,17 +2,132 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import Link from "next/link";
+import EmblaCarousel from "@/components/carousel/AboutCarousel";
+
+const timelineItems = [
+  {
+    id: 1,
+    period: "El comienzo",
+    emoji: "✨",
+    text: "Desde pequeña sentí pasión por la enseñanza y la comunicación. Siempre tuve el deseo de hacer algo grande y viajar por el mundo.",
+    images: ["/images/about/2.jpeg"],
+    imageAlt: "Karen de niña",
+  },
+  {
+    id: 2,
+    period: "Argentina → Alemania",
+    emoji: "🎓",
+    text: "Estudié el Profesorado en Lengua y Culturas Inglesas en la Universidad Nacional de Cuyo, en Mendoza. Fui becada para cursar 8 meses en la Technische Universität Chemnitz, en Alemania, donde también aprendí alemán.",
+    images: [
+      "/images/about/2SECCION-3.jpeg",
+      "/images/about/2SECCION-4.png",
+      "/images/about/2SECCION-5.png",
+      "/images/about/2SECCION-6.jpeg",
+    ],
+    imageAlt: "Universidad y graduación",
+  },
+  {
+    id: 3,
+    period: "Copenhagen",
+    emoji: "🇩🇰",
+    text: "Viví en Copenhagen, donde tuve la oportunidad de trabajar como profesora voluntaria de inglés en un centro educativo. Durante ese tiempo también di clases particulares, ayudando a estudiantes a mejorar su comunicación y confianza en el idioma.",
+    images: ["/images/about/cope.png"],
+    imageAlt: "Copenhagen",
+  },
+  {
+    id: 4,
+    period: "Pandemia → IOK",
+    emoji: "💻",
+    text: "Durante la pandemia mi plan era mudarme a Australia, pero el COVID cambió todo. Volví a Argentina y fue allí donde nació IOK, mi proyecto de enseñanza online. Lo que comenzó como unas pocas clases virtuales creció hasta formar una comunidad de más de 80 estudiantes.",
+    images: [
+      "/images/about/seccion4-12.png",
+      "/images/about/seccion4-13.png",
+      "/images/about/seccion4-14.png",
+      "/images/about/seccion4-15.png",
+      "/images/about/seccion4-16.png",
+      // "/images/about/seccion4-17.jpg",
+    ],
+    imageAlt: "Comunidad IOK online",
+  },
+  {
+    id: 5,
+    period: "Suecia, 2021",
+    emoji: "🇸🇪",
+    text: "En 2021 me mudé a Suecia y desde allí continué desarrollando mi comunidad.",
+    images: ["/images/about/seccion5.jpg"],
+    imageAlt: "Suecia",
+  },
+  {
+    id: 6,
+    period: "Irlanda, 2022",
+    emoji: "🇮🇪",
+    text: "En 2022 me mudé a Irlanda, donde trabajé presencialmente en una escuela de inglés para adultos. Fue mi primera experiencia enseñando cursos intensivos en aulas multiculturales, lo que me permitió desarrollar un enfoque práctico y adaptado a estudiantes de distintos orígenes y niveles.",
+    images: [
+      "/images/about/seccion6-18.jpg",
+      "/images/about/seccion6-19.jpg",
+      "/images/about/seccion6-20.jpg",
+      "/images/about/seccion6-21.jpg",
+      "/images/about/seccion6-22.jpg",
+      "/images/about/seccion6-24.jpeg",
+    ],
+    imageAlt: "Irlanda",
+  },
+  {
+    id: 7,
+    period: "Hoy",
+    emoji: "🌎",
+    text: "Vivo entre España y Francia, sigo enseñando inglés online y explorando nuevas formas de ayudar a mis alumnos a comunicarse con confianza. Además, actualmente estoy aprendiendo francés.",
+    images: ["/images/about/ultimafoto.jpg"],
+    imageAlt: "Hoy, entre España y Francia",
+  },
+];
+
+function TimelineImages({ images, alt }: { images: string[]; alt: string }) {
+  if (images.length === 0) return null;
+
+  if (images.length === 1) {
+    return (
+      <div className="relative h-80 w-full max-w-2xl rounded-2xl overflow-hidden shadow-md border border-black/10">
+        <Image src={images[0]} alt={alt} fill className="object-cover" />
+      </div>
+    );
+  }
+
+  return (
+    <div className="w-full sm:px-8">
+      <EmblaCarousel
+        options={{ loop: false, align: "start" }}
+        slideClassName="basis-[80%] sm:basis-[48%]"
+      >
+        {images.map((src, i) => (
+          <div
+            key={i}
+            className="relative h-56 sm:h-70 w-full rounded-xl overflow-hidden shadow-md border border-black/10"
+          >
+            <Image
+              src={src}
+              alt={`${alt} ${i + 1}`}
+              fill
+              className="object-cover"
+            />
+          </div>
+        ))}
+      </EmblaCarousel>
+    </div>
+  );
+}
 
 export default function AboutSection() {
   return (
     <section className="relative bg-bg overflow-hidden padding">
+      {/* Background decorations */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 left-0 w-full h-72 gradient opacity-10 blur-3xl" />
         <div className="absolute -bottom-10 -right-10 w-64 h-64 rounded-full gradient opacity-10 blur-3xl" />
       </div>
 
       <div className="ctn ctn-margin">
+        {/* ── Hero intro ── */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           <motion.div
             className="lg:col-span-5 lg:order-2 flex justify-center"
@@ -24,17 +139,13 @@ export default function AboutSection() {
             <div className="relative w-55 sm:w-62.5 lg:w-70">
               <div className="relative h-70 sm:h-77.5 lg:h-85 rounded-[28px] overflow-hidden shadow-xl border border-black/10">
                 <Image
-                  src="/images/her/karen.jpeg"
+                  src="/images/about/karen.jpeg"
                   alt="Karen profesora de inglés"
                   fill
                   priority
                   className="object-cover"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-black/20 to-transparent" />
-              </div>
-
-              <div className="absolute -bottom-4 -left-4 bg-bg shadow-md border border-black/10 rounded-2xl px-4 py-2 text-sm font-semibold text-text whitespace-nowrap">
-                +5 años enseñando 🎓
               </div>
             </div>
           </motion.div>
@@ -54,11 +165,10 @@ export default function AboutSection() {
             </h2>
 
             <p className="text-text/80 mb-5">
-              Soy profesora de inglés con formación universitaria y una maestría
-              en enseñanza de segundas lenguas. Viví y estudié en distintos
-              países de Europa, y sé lo que significa empezar de cero en otro
-              lugar y necesitar el idioma para crecer personal y
-              profesionalmente.
+              Soy profesora de inglés argentina con formación universitaria y
+              una maestría en enseñanza de segundas lenguas. Después de vivir y
+              estudiar en distintos países de Europa, hoy ayudo a mis
+              estudiantes a:
             </p>
 
             <motion.blockquote
@@ -68,43 +178,69 @@ export default function AboutSection() {
               viewport={{ once: true }}
               className="border-l-4 border-current gradient bg-clip-text pl-4 italic text-text/80 space-y-1"
             >
-              <p>Aprender inglés no es solo memorizar reglas.</p>
-              <p>Es animarse a hablar. Es equivocarse sin miedo.</p>
-              <p>Es ganar confianza.</p>
+              <p>Comunicarse en inglés con confianza</p>
+              <p>Abrirse a nuevas oportunidades</p>
+              <p>Construir su propio camino</p>
             </motion.blockquote>
           </motion.div>
         </div>
 
+        {/* ── Divider ── */}
         <div className="my-12 h-px bg-text/10" />
 
+        {/* ── Section title ── */}
         <motion.div
-          className="flex flex-col"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.6 }}
           viewport={{ once: true }}
+          className="mb-12"
         >
-          <div className="lg:col-span-8 flex flex-col gap-4">
-            <p className="text-text/80">
-              En 2020 creé <span className="font-semibold">Learn with IOK</span>{" "}
-              para acompañar a personas que quieren expandirse profesional y
-              personalmente a través del idioma.
-              <br />
-              No trabajo con alumnos. Trabajo con personas.
-              <br />
-              Cada estudiante tiene objetivos distintos, ritmos distintos y
-              desafíos distintos. Mi compromiso es acompañarte con
-              responsabilidad, seguimiento real y una metodología que funcione.
-              <br />
-              Acá no sos un número. Sos parte de una comunidad que aprende para
-              avanzar.
-            </p>
-          </div>
-
-          <Link href="/agenda" className="btn btn-colors mt-12 w-auto self-center lg:self-start">
-            Quiero empezar
-          </Link>
+          <h3 className="outfit text-2xl sm:text-3xl font-bold text-text">
+            Donde empezó todo
+          </h3>
+          <p className="text-text/50 mt-2 text-sm">
+            Un recorrido por los lugares que me formaron
+          </p>
         </motion.div>
+
+        {/* ── Timeline ── */}
+        <div className="relative">
+          {/* Vertical line */}
+          <div className="absolute left-3.5 top-0 bottom-0 w-px bg-text/10" />
+
+          <div className="space-y-12">
+            {timelineItems.map((item, index) => (
+              <motion.div
+                key={item.id}
+                initial={{ opacity: 0, x: -12 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.05 }}
+                viewport={{ once: true, margin: "-60px" }}
+                className="relative pl-12"
+              >
+                {/* Dot */}
+                <div className="absolute left-0 top-1 flex items-center justify-center w-7 h-7 rounded-full bg-bg border-2 border-text/15 shadow-sm z-10">
+                  <div className="w-2.5 h-2.5 rounded-full gradient" />
+                </div>
+
+                {/* Period label */}
+                <span className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-widest gradient bg-clip-text text-transparent mb-1.5">
+                  {item.emoji && <span>{item.emoji}</span>}
+                  {item.period}
+                </span>
+
+                {/* Description */}
+                <p className="text-text/75 leading-relaxed mb-4">
+                  {item.text}
+                </p>
+
+                {/* Images */}
+                <TimelineImages images={item.images} alt={item.imageAlt} />
+              </motion.div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
