@@ -119,15 +119,10 @@ function TimelineImages({ images, alt }: { images: string[]; alt: string }) {
 
 export default function AboutSection() {
   return (
-    <section className="relative bg-bg overflow-hidden padding">
-      {/* Background decorations */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-0 w-full h-72 gradient opacity-10 blur-3xl" />
-        <div className="absolute -bottom-10 -right-10 w-64 h-64 rounded-full gradient opacity-10 blur-3xl" />
-      </div>
+    <section className="relative bg-linear-to-r from-bg via-violet/10 to-blue/10  overflow-hidden padding">
+    
 
       <div className="ctn ctn-margin">
-        {/* ── Hero intro ── */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           <motion.div
             className="lg:col-span-5 lg:order-2 flex justify-center"

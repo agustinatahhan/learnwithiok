@@ -1,4 +1,4 @@
-// import About from "@/components/ui/About/About";
+import About from "@/components/ui/About/About";
 import Audience from "@/components/ui/Audience/Audience";
 import Contact from "@/components/ui/Contact/Contact";
 import Hero from "@/components/ui/Hero/Hero";
@@ -18,7 +18,7 @@ export default function Home() {
       <Audience />
       <Testimonials />
       <VideoSection />
-      {/* <About /> */}
+      <About />
       <Contact />
     </>
   );
