@@ -31,7 +31,7 @@ const timelineItems = [
     period: "Copenhagen",
     emoji: "🇩🇰",
     text: "Viví en Copenhagen, donde tuve la oportunidad de trabajar como profesora voluntaria de inglés en un centro educativo. Durante ese tiempo también di clases particulares, ayudando a estudiantes a mejorar su comunicación y confianza en el idioma.",
-    images: ["/images/about/cope.png"],
+    images: ["/images/about/copen.png"],
     imageAlt: "Copenhagen",
   },
   {
