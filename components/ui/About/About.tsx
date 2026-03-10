@@ -5,7 +5,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 const stats = [
-  { value: "2020", label: "Clases\nonline desde" },
+  { value: "2020", label: "Comenzaron las\nclases online " },
   { value: "+13", label: "años de\nexperiencia" },
   { value: "+300", label: "alumnos\nformados" },
 ];
@@ -76,7 +76,6 @@ export default function About() {
         </div>
       </div>
 
-      {/* ── Bottom CTA ── */}
       <motion.div
         initial={{ opacity: 0, y: 18 }}
         whileInView={{ opacity: 1, y: 0 }}
