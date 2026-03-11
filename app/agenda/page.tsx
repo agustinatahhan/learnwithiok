@@ -15,18 +15,18 @@ const plans = [
     individual: "Sesión Individual:",
     price: "15 €.",
     pack1: 'Pack "Conversationalist" (10 sesiones):',
-    price1: "90 €.",
-    note: "9 € por clase. Ideal para mantener el ritmo semanalmente.",
+    price1: "140 €.",
+    note: "Ideal para mantener el ritmo semanalmente.",
     highlight: false,
-    description: "Grupos de 5 a 8 personas.",
+    description: "Grupos de 5 a 8 personas. Sesiones de 1:15 horas.",
   },
   {
     icon: GrGroup,
-    label: "Curso General English (3O sesiones)",
+    label: "Curso General English",
     individual: "Pago Mensual:",
-    price: "120 € por 10 sesiones.",
-    pack1: 'Pack "Full Level" (Pago único 3 meses):',
-    price1: "320 €.",
+    price: "150 € por 10 sesiones.",
+    pack1: 'Pack "Full Level" (3O sesiones):',
+    price1: "400 €.",
     note: "Este pack garantiza tu plaza y material por todo el trimestre.",
     highlight: false,
     description:
@@ -37,10 +37,8 @@ const plans = [
     label: "Clases Privadas (Individuales)",
     individual: "Clase Suelta:",
     price: "20 €.",
-    pack1: "Pack de 5 clases:",
-    price1: "90 € (18 €/h).",
-    pack2: "Pack de 10 clases:",
-    price2: "160 € (16 €/h).",
+    pack1: "Pack de 10 clases:",
+    price1: "180 €.",
     highlight: false,
     description: "Duración: 1 hora.",
     note: "Atención 100% personalziada."
@@ -51,7 +49,7 @@ const plans = [
     individual: "Clase individual:",
     price: "25 €.",
     pack1: "Pack de 10 clases:",
-    price1: "220 €.",
+    price1: "230 €.",
     note: "Para profesionales que necesitan resultados rápidos.",
     highlight: false,
     description:
@@ -125,9 +123,9 @@ export default function Agenda() {
                       label,
                       price,
                       price1,
-                      price2,
+                      
                       pack1,
-                      pack2,
+                   
                       individual,
                       highlight,
                       description,
@@ -204,7 +202,7 @@ export default function Agenda() {
                         </div>
 
                         {/* Pack 2 (optional) */}
-                        {pack2 && (
+                        {/* {pack2 && (
                           <div className="flex items-center justify-between">
                             <span className="text-sm text-text/70">
                               {pack2}
@@ -215,7 +213,7 @@ export default function Agenda() {
                               {price2}
                             </span>
                           </div>
-                        )}
+                        )} */}
 
                         {/* Note */}
                         {note && (
@@ -231,6 +229,9 @@ export default function Agenda() {
                   ),
                 )}
               </div>
+                <p className="text-sm text-text/60 leading-relaxed mt-6 italic text-center">
+                          Si venís con un amigo les hacemos 10% de descuento a cada uno.
+                        </p>
             </motion.div>
             <motion.div
               className="flex gap-5"
