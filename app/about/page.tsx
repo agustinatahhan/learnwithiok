@@ -31,7 +31,7 @@ const timelineItems = [
     period: "Copenhagen",
     emoji: "🇩🇰",
     text: "Viví en Copenhagen, donde tuve la oportunidad de trabajar como profesora voluntaria de inglés en un centro educativo. Durante ese tiempo también di clases particulares, ayudando a estudiantes a mejorar su comunicación y confianza en el idioma.",
-    images: ["/images/about/copen.png"],
+    images: ["/images/about/cop.png"],
     imageAlt: "Copenhagen",
   },
   {
@@ -88,7 +88,7 @@ function TimelineImages({ images, alt }: { images: string[]; alt: string }) {
   if (images.length === 1) {
     return (
       <div className="relative h-80 w-full max-w-2xl rounded-2xl overflow-hidden shadow-md border border-black/10">
-        <Image src={images[0]} alt={alt} fill className="object-cover" />
+        <Image src={images[0]} alt={alt} fill className="object-cover " />
       </div>
     );
   }
@@ -108,7 +108,7 @@ function TimelineImages({ images, alt }: { images: string[]; alt: string }) {
               src={src}
               alt={`${alt} ${i + 1}`}
               fill
-              className="object-cover"
+              className="object-cover "
             />
           </div>
         ))}
