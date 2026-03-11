@@ -31,9 +31,19 @@ const timelineItems = [
     period: "Copenhagen",
     emoji: "🇩🇰",
     text: "Viví en Copenhagen, donde tuve la oportunidad de trabajar como profesora voluntaria de inglés en un centro educativo. Durante ese tiempo también di clases particulares, ayudando a estudiantes a mejorar su comunicación y confianza en el idioma.",
-    images: ["/images/about/cop.png"],
+    images: [
+      "/images/about/cop.png",
+      "/images/about/SECCION3-7.jpeg",
+      "/images/about/SECCION3-8.jpeg",
+      "/images/about/SECCION3-9.jpeg",
+      "/images/about/SECCION3-10.jpeg",
+      "/images/about/SECCION3-11.jpeg",
+
+      "/images/about/SECCION3-EXTRAFOTO.jpeg",
+    ],
     imageAlt: "Copenhagen",
   },
+  
   {
     id: 4,
     period: "Pandemia → IOK",
@@ -61,7 +71,7 @@ const timelineItems = [
     id: 6,
     period: "Irlanda, 2022",
     emoji: "🇮🇪",
-    text: "En 2022 me mudé a Irlanda, donde trabajé presencialmente en una escuela de inglés para adultos. Fue mi primera experiencia enseñando cursos intensivos en aulas multiculturales, lo que me permitió desarrollar un enfoque práctico y adaptado a estudiantes de distintos orígenes y niveles.",
+    text: "En 2022 me mudé a Irlanda, donde trabajé presencialmente en una escuela de inglés para adultos. Fue mi primera experiencia enseñando cursos intensivos en aulas multiculturales, lo que me permitió desarrollar un enfoque práctico y adaptado a estudiantes de distintos orígenes y niveles. Además, trabajé una temporada en un afterschool Montessori con niños de 5 a 11 años, realizando talleres de arte, cultura y teatro, lo que me permitió desarrollar y poner en práctica mi creatividad como docente.",
     images: [
       "/images/about/SECCION6-18.jpg",
       "/images/about/SECCION6-19.jpg",
@@ -120,8 +130,6 @@ function TimelineImages({ images, alt }: { images: string[]; alt: string }) {
 export default function AboutSection() {
   return (
     <section className="relative bg-linear-to-r from-bg via-violet/10 to-blue/10  overflow-hidden padding">
-    
-
       <div className="ctn ctn-margin">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           <motion.div
@@ -226,9 +234,7 @@ export default function AboutSection() {
                 </span>
 
                 {/* Description */}
-                <p className="text-text/75 leading-relaxed mb-4">
-                  {item.text}
-                </p>
+                <p className="text-text/75 leading-relaxed mb-4">{item.text}</p>
 
                 {/* Images */}
                 <TimelineImages images={item.images} alt={item.imageAlt} />
