@@ -12,7 +12,7 @@ const plans = [
   {
     icon: HiOutlineSpeakerphone,
     label: "Club de Conversación",
-    individual: "Sesión Individual:",
+    individual: "Clase Individual:",
     price: "15 €.",
     pack1: 'Pack "Conversationalist" (10 sesiones):',
     price1: "140 €.",
@@ -35,7 +35,7 @@ const plans = [
   {
     icon: IoPersonOutline,
     label: "Clases Privadas (Individuales)",
-    individual: "Clase Suelta:",
+    individual: "Clase individual:",
     price: "20 €.",
     pack1: "Pack de 10 clases:",
     price1: "180 €.",
